@@ -1,0 +1,413 @@
+*{
+    box-sizing: border-box;
+}
+
+:root {
+	--black-text: #000000;
+	--black: #222222;
+	--dark-grey: #818181;
+	--grey: #EEEEEE;
+	--ligth-grey: #F6F6F6;
+	--white: white;
+	--red: red;
+}
+
+html{
+	background: url('assert/img/background.jpg') center center;
+}
+
+body{
+    max-width: 84%;
+    margin: 0 auto;
+    font-size: 18px;
+	font-family: 'Open Sans', sans-serif;
+	background-color: var(--white);
+	box-shadow: 0px 0px 15px rgba(129, 129, 129, 0.5);
+}
+
+/*-------------------------*/
+/* TITLES          
+/*-------------------------*/
+
+
+h1, h2, h3, nav a{
+	font-family: 'Alegreya SC', serif;
+}
+
+h1, h2, h3{
+	font-weight:700;
+	text-align:center;
+}
+
+h1, h2 {
+	font-size: 32px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+/*--------------------------------*/
+/* GENERAL CLASSES AND PROPERTIES   
+/*--------------------------------*/
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.catch-phrase{
+	font-size: 22px;
+	color: var(--dark-grey);
+	text-align:center;
+	margin-bottom: 1.8em;
+}
+
+.grey-container{
+	background-color: var(--ligth-grey);
+	padding: 2.5em;
+	min-height: 70vh; 
+}
+
+.star{
+	color: var(--red);	
+}
+
+/*-------------------------*/
+/* PREHEADER         
+/*-------------------------*/
+
+#preheader{
+	background-color: var(--black);
+	height: 50px;
+}
+
+#preheader li, address{
+	margin-top: 12px;
+	margin-left: 15px;
+}
+
+#preheader li img, .icone img{
+	height: 26px;
+}
+
+address a{
+	color: var(--white);
+}
+
+#email_telephone address{
+	margin-right: 20px;
+}
+
+
+.email_telephone_distance{
+	margin-right: 40px;
+}
+
+/*-------------------------*/
+/* HEADER             
+/*-------------------------*/
+
+nav{
+	background-color: var(--white);
+}
+
+address a:hover {
+    color: var(--dark-greygrey);
+	text-decoration: none;
+}
+
+#logo{
+    height:120px;
+}
+
+.uk-navbar-nav li  a{
+	font-family: 'Alegreya SC';
+	font-size: 20px;
+	color: var(--black-text);
+}
+
+/*-------------------------*/
+/* GALLERY SECTION         
+/*-------------------------*/
+
+#gallery-section{
+	background-color: var(--grey);
+}
+
+.painting{
+	height:300px;
+	width: auto;
+	overflow: hidden;
+}
+
+.painting img{
+	transition: transform 0.5s;
+	object-fit: cover;
+	height: 100%;
+}
+.painting:hover img{
+	transform: scale(1.1);
+}
+
+.modal-image{
+	height:90vh;
+	width:auto;
+}
+
+.uk-modal-dialog{
+	width: max-content;
+}
+
+/*-------------------------*/
+/* OFFER SECTION        
+/*-------------------------*/
+
+#offer-section{
+	border-top: 1px solid var(--grey);
+	border-bottom: 1px solid var(--grey);
+}
+
+#myslide {
+    width: 350px;
+	height: 550px;
+	position: relative;
+	overflow: hidden;
+}
+
+#before, #after {
+	height: 550px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+}
+
+#before {
+    width: 350px;
+	
+}
+
+#after {
+    width: 175px;
+	border-right: 5px solid var(--dark-grey);
+	background: url('img/after.jpg') no-repeat top left;
+	background-size: auto 100%;
+} 
+
+#form{
+	background-color: var(--ligth-grey);
+}
+
+/*-------------------------*/
+/* ARTIST SECTION         
+/*-------------------------*/
+
+#artist-quote{
+	background-color: var(--ligth-grey);
+	font-style: italic;
+	padding: 1em;
+	font-size: 20px;
+}
+
+/*-------------------------*/
+/* FOOTER           
+/*-------------------------*/
+
+footer div{
+	color :var(--white);
+} 
+
+#footer-image img{
+	max-width: 150px
+}
+
+/*-------------------------*/
+/* HART         
+/*-------------------------*/
+
+@keyframes heartbeat {
+	0% {
+	  transform: scale( .75);
+	}
+	20% {
+	  transform: scale( 1);
+	}
+	40% {
+	  transform: scale( .75);
+	}
+	60% {
+	  transform: scale( 1);
+	}
+	80% {
+	  transform: scale( .75);
+	}
+	100% {
+	  transform: scale( .75);
+	}
+}
+  
+#heart {
+	position: relative;
+	width: 40px;
+	height: 36px;
+	animation: heartbeat 1s infinite;
+}
+  
+#heart:before,
+#heart:after {
+	position: absolute;
+	content: "";
+	left: 20px;
+	top: 0;
+	width: 20px;
+	height: 36px;
+	background: var(--red);
+	-moz-border-radius: 20px 20px 0 0;
+	border-radius: 20px 20px 0 0;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-transform-origin: 0 100%;
+	-moz-transform-origin: 0 100%;
+	-ms-transform-origin: 0 100%;
+	-o-transform-origin: 0 100%;
+	transform-origin: 0 100%;
+}
+  
+#heart:after {
+	left: 0;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-transform-origin: 100% 100%;
+	-moz-transform-origin: 100% 100%;
+	-ms-transform-origin: 100% 100%;
+	-o-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+}
+
+/*-------------------------*/
+/* PAINTINGS        
+/*-------------------------*/
+
+.painting-titre {
+	font-family: 'Alegreya SC', serif;
+	font-weight:700;
+	text-align:center;
+	font-size: 20px;
+	margin:0;
+}
+
+.gallery-image{
+	height:330px;
+	width: auto;
+}
+
+/*-------------------------*/
+/* CONTACT         
+/*-------------------------*/
+
+.contact{
+	padding: 2em;
+	border-top: 1px solid var(--grey);
+}
+
+.contact-container{
+	background-color: var(--ligth-grey);
+	padding: 2em; 
+}
+
+/*-------------------------*/
+/* MESSAGE         
+/*-------------------------*/
+
+.message{
+	font-weight:700;
+	text-align:center;
+	font-size: 36px;
+	color: rgb(0, 92, 35);
+}
+
+
+/*-------------------------*/
+/* Media queries       
+/*-------------------------*/
+
+
+@media screen and (max-width : 960px) {
+
+	body{
+		max-width: 100%;
+	}
+	
+	#artist-quote{
+		margin-left: 1.5em;
+	}
+}
+
+@media screen and (max-width : 768px) {
+
+	.contact-container{
+		padding:0px;
+	} 
+
+	.modal-image{
+		height:auto;
+		width:90vh;
+	}
+
+	h1, h2 {
+		font-size: 28px;
+	}
+}
+
+@media screen and (max-width : 480px) {
+
+	#email_telephone {
+		padding-left:1em;
+	}
+
+	#email_telephone address{
+		margin-right: 0px;
+	}
+
+	.email_telephone_distance{
+		margin-right: 0px;
+	}
+
+	.uk-button-large, .uk-button  {
+		padding: 0 20px;
+		font-size: .76rem;
+	}
+}
+
+@media screen and (max-width : 320px) {
+	.painting{
+		height:220px;
+	}
+
+	.gallery-image{
+		height:250px;
+		width: auto;
+	}
+
+	#email_telephone{
+		display:none;
+	}
+
+	h1, h2 {
+		font-size: 24px;
+	}
+
+}
+
+
