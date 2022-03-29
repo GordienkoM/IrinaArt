@@ -1,12 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello MainController!{% endblock %}
+{% block title %}Сайт художницы Ирины Козловой Кузнецовой{% endblock %}
 
 {% block body %}
 
 <section id="gallery-section" class="uk-padding">
-    <h1 class="uk-padding-top uk-text-center">Bienvenue sur le site de l'artiste Irina Kozlova-Kuznetsova</h1>
-    <p class="catch-phrase">Découvrez des peintures sur toile réalisées par l'artiste</p>
+    <h1 class="uk-padding-top uk-text-center">
+        {% trans %} Персональный сайт художницы Ирины Козловой Кузнецовой {% endtrans %}
+    </h1>
+    <p class="catch-phrase">
+        {% trans %}Картины маслом на холсте{% endtrans %}
+    </p>
 </section>
 
 {% endblock %}

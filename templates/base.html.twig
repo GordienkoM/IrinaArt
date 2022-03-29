@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}IrinaArt{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <link rel="icon" href="{{ asset('assets/img/favicon.png') }}">
         
         <!-- FONTS: Open Sans et Alegreya SC -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,21 +71,26 @@
                     <div class="uk-navbar-right">
                         <ul class="uk-navbar-nav uk-visible@s">
                             <li class="uk-navbar-item">
-                                <a href="{{ path('home') }}">Home</a>
+                                <a href="{{ path('home') }}">{% trans %}Главная{% endtrans %}</a>
                             </li>
                             <li class="uk-navbar-item">
-                                <a href="{{ path('home') }}">Gallery</a>
+                                <a href="{{ path('home') }}">{% trans %}Галерея  {% endtrans %}</a>
                             </li>
                             <li class="uk-navbar-item">
-                                <a href="{{ path('home') }}">Coures</a>
-                            </li>
-
-                            <li class="uk-navbar-item">
-                                <a href="{{ path('home') }}">About artist</a>
+                                <a href="{{ path('home') }}">{% trans %}О художнике  {% endtrans %}</a>
                             </li>
 
                             <li class="uk-navbar-item">
-                                <a href="{{ path('home') }}">Contact</a>
+                                <a href="{{ path('home') }}">{% trans %}Учебный материал  {% endtrans %}</a>
+                            </li>
+                            <li class="uk-navbar-item">
+                                <a href="{{ path('home') }}">{% trans %}Контакты{% endtrans %}</a>
+                            </li>
+                            <li class="uk-navbar-item">
+                                <a href="{{ path('home') }}">{% trans %}Доставка{% endtrans %}</a>
+                            </li>
+                            <li class="uk-navbar-item">
+                                <a href="{{ path('home') }}">{% trans %}Корзина{% endtrans %}</a>
                             </li>
                         </ul>
                         <a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
@@ -94,22 +99,28 @@
                 <div id="sidenav" uk-offcanvas="flip: true" class="uk-offcanvas">
                     <div class="uk-offcanvas-bar">
                         <ul class="uk-nav">
+                            <ul class="uk-navbar-nav uk-visible@s">
                             <li class="uk-navbar-item">
-                                <a href="{{ path('home') }}">Home</a>
+                                <a href="{{ path('home') }}">{% trans %}Главная{% endtrans %}</a>
                             </li>
                             <li class="uk-navbar-item">
-                                <a href="{{ path('home') }}">Gallery</a>
+                                <a href="{{ path('home') }}">{% trans %}Галерея  {% endtrans %}</a>
                             </li>
                             <li class="uk-navbar-item">
-                                <a href="{{ path('home') }}">Coures</a>
-                            </li>
-
-                            <li class="uk-navbar-item">
-                                <a href="{{ path('home') }}">About artist</a>
+                                <a href="{{ path('home') }}">{% trans %}О художнике  {% endtrans %}</a>
                             </li>
 
                             <li class="uk-navbar-item">
-                                <a href="{{ path('home') }}">Contact</a>
+                                <a href="{{ path('home') }}">{% trans %}Учебный материал  {% endtrans %}</a>
+                            </li>
+                            <li class="uk-navbar-item">
+                                <a href="{{ path('home') }}">{% trans %}Контакты{% endtrans %}</a>
+                            </li>
+                            <li class="uk-navbar-item">
+                                <a href="{{ path('home') }}">{% trans %}Доставка{% endtrans %}</a>
+                            </li>
+                            <li class="uk-navbar-item">
+                                <a href="{{ path('home') }}">{% trans %}Корзина{% endtrans %}</a>
                             </li>
                         </ul>
                     </div>
@@ -119,21 +130,21 @@
         {% block body %}
         
         {% endblock %}
-        {% block footer %}
+        {% block footer %}  
             <footer  class="uk-section uk-section-secondary uk-light uk-padding-large">
                 <div class="uk-container">
                     <div id="footer-grid" class="uk-grid-match uk-child-width-1-1 uk-child-width-1-2@m uk-child-width-1-3@l" uk-grid>
                         <div class="uk-text-left@m uk-text-center">
-                            <h3 class="uk-text-center">Info</h3>                       
-                            <div><a href="{{ path('home') }}">Gallery</a></div>
-                            <div><a href="{{ path('home') }}">Courses</a></div>
-                            <div><a href="{{ path('home') }}">About artist</a></div>
-                            <div><a href="{{ path('home') }}">Contact</a></div>
-                            <div><a href="{{ path('home') }}">Legal notice</a></div>
-                            <div><a href="{{ path('home') }}">Privacy policy</a></div>
+                            <h3 class="uk-text-center">Информация</h3>                       
+                            <div><a href="{{ path('home') }}">Картинная галерея</a></div>
+                            <div><a href="{{ path('home') }}">Уроки рисования</a></div>
+                            <div><a href="{{ path('home') }}">О художнике</a></div>
+                            <div><a href="{{ path('home') }}">Связаться с художником</a></div>
+                            <div><a href="{{ path('home') }}">Правовая информация</a></div>
+                            <div><a href="{{ path('home') }}">Политика конфиденциальности</a></div>
                         </div>
                         <address class="uk-text-left@m uk-text-center">
-                            <h3 class="uk-text-center">Contacts</h3>                                         
+                            <h3 class="uk-text-center">Контакты</h3>                                         
                             <div><a target="_blank" href="https://www.instagram.com/artkozi/">Instagram</a></div>
                             <div><a target="_blank" href="https://www.facebook.com/artkozlova">Facebook</a></div>
                             <div><a target="_blank" href="https://www.youtube.com/channel/UCUu97jCyEiwFAzdK_dGvcbg/videos">YouTube</a></div> 
@@ -150,7 +161,7 @@
 
                                 {# HART #}
                                 <div id="heart" class="uk-margin-right"></div>
-                                Rejoignez-nous
+                                Присоединяйтесь к нам
                             </h3>
                             <div id="footer-image" class="uk-child-width-expand@s uk-text-center" uk-grid>
                                 <div>
