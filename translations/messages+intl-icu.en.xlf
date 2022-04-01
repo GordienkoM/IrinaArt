@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="ru" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="0yjlPcR" resname="Главная">
+        <source>Главная</source>
+        <target>Home</target>
+      </trans-unit>
+      <trans-unit id="9pyycfH" resname="Галерея">
+        <source>Галерея</source>
+        <target>Gallery</target>
+      </trans-unit>
+      <trans-unit id="AfPc0WS" resname="О художнике">
+        <source>О художнике</source>
+        <target>About artist</target>
+      </trans-unit>
+      <trans-unit id="3u_rlqW" resname="Учебный материал">
+        <source>Учебный материал</source>
+        <target>Articles</target>
+      </trans-unit>
+      <trans-unit id=".KjVqjw" resname="Контакты">
+        <source>Контакты</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="d0OdI7e" resname="Доставка">
+        <source>Доставка</source>
+        <target>Delivery</target>
+      </trans-unit>
+      <trans-unit id="7BgIQT3" resname="Корзина">
+        <source>Корзина</source>
+        <target>Basket</target>
+      </trans-unit>
+      <trans-unit id="lchcrLq" resname="Персональный сайт художницы Ирины Козловой Кузнецовой">
+        <source>Персональный сайт художницы Ирины Козловой Кузнецовой</source>
+        <target>Personal website of artist Irina Kozlova Kuznetsova</target>
+      </trans-unit>
+      <trans-unit id="1Jj0sv3" resname="Картины маслом на холсте">
+        <source>Картины маслом на холсте</source>
+        <target>Oil paintings on canvas</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
