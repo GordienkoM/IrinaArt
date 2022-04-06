@@ -95,11 +95,16 @@ ul {
 	height: 26px;
 }
 
-address a{
+address a, #locales a{
 	color: var(--white);
 }
 
-#email_telephone address{
+#locales .uk-navbar-nav li a{
+	min-height: 20px;
+}
+
+
+#email_telephone address #locales{
 	margin-right: 20px;
 }
 
