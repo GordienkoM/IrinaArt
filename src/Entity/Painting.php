@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\PaintingRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -91,6 +93,34 @@ class Painting
      * @ORM\Column(type="string", length=255)
      */
     private $material;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Category::class, mappedBy="paintings")
+     */
+    private $categories;
+
+    /**
+     * @ORM\OneToMany(targetEntity=PaintingVideo::class, mappedBy="painting")
+     */
+    private $videos;
+
+    /**
+     * @ORM\OneToMany(targetEntity=PaintingImage::class, mappedBy="painting")
+     */
+    private $images;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Keyword::class, mappedBy="paintings")
+     */
+    private $keywords;
+
+    public function __construct()
+    {
+        $this->categories = new ArrayCollection();
+        $this->videos = new ArrayCollection();
+        $this->images = new ArrayCollection();
+        $this->keywords = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -273,6 +303,120 @@ class Painting
     public function setMaterial(string $material): self
     {
         $this->material = $material;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Category>
+     */
+    public function getCategories(): Collection
+    {
+        return $this->categories;
+    }
+
+    public function addCategory(Category $category): self
+    {
+        if (!$this->categories->contains($category)) {
+            $this->categories[] = $category;
+            $category->addPainting($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCategory(Category $category): self
+    {
+        if ($this->categories->removeElement($category)) {
+            $category->removePainting($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, PaintingVideo>
+     */
+    public function getVideos(): Collection
+    {
+        return $this->videos;
+    }
+
+    public function addVideo(PaintingVideo $video): self
+    {
+        if (!$this->videos->contains($video)) {
+            $this->videos[] = $video;
+            $video->setPainting($this);
+        }
+
+        return $this;
+    }
+
+    public function removeVideo(PaintingVideo $video): self
+    {
+        if ($this->videos->removeElement($video)) {
+            // set the owning side to null (unless already changed)
+            if ($video->getPainting() === $this) {
+                $video->setPainting(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, PaintingImage>
+     */
+    public function getImages(): Collection
+    {
+        return $this->images;
+    }
+
+    public function addImage(PaintingImage $image): self
+    {
+        if (!$this->images->contains($image)) {
+            $this->images[] = $image;
+            $image->setPainting($this);
+        }
+
+        return $this;
+    }
+
+    public function removeImage(PaintingImage $image): self
+    {
+        if ($this->images->removeElement($image)) {
+            // set the owning side to null (unless already changed)
+            if ($image->getPainting() === $this) {
+                $image->setPainting(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Keyword>
+     */
+    public function getKeywords(): Collection
+    {
+        return $this->keywords;
+    }
+
+    public function addKeyword(Keyword $keyword): self
+    {
+        if (!$this->keywords->contains($keyword)) {
+            $this->keywords[] = $keyword;
+            $keyword->addPainting($this);
+        }
+
+        return $this;
+    }
+
+    public function removeKeyword(Keyword $keyword): self
+    {
+        if ($this->keywords->removeElement($keyword)) {
+            $keyword->removePainting($this);
+        }
 
         return $this;
     }
