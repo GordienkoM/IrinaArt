@@ -11,6 +11,45 @@
     <p class="catch-phrase">
         {% trans %}Картины маслом на холсте{% endtrans %}
     </p>
+
+    {# {% for painting in paintings %}
+        <li class="uk-text-center painting">
+            <img src="{{ asset('assets/img/galleryImages/' ~ painting.galleryImage) }}" alt="{{ painting.alt}}">                  
+        </li>
+    {% endfor %} #}
+    <!-- SLIDER -->
+            
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+
+                <ul class="uk-margin-bottom uk-slider-items uk-child-width-1-1 uk-child-width-1-8@xl uk-child-width-1-6@l uk-child-width-1-4@m uk-child-width-1-2@s uk-grid">
+                    
+                    {% for painting in paintings %}
+                    <li>
+                        <!-- Slider image -->
+                        <div class="uk-panel painting uk-text-center">
+                            <a href="#{{ painting.name}}" uk-toggle>
+                                <img src="{{ asset('assets/img/galleryImages/' ~ painting.galleryImage) }}" alt="{{ painting.alt}}">
+                            </a>    
+                        </div>
+                        <!-- Modal Image with close button -->
+                        <div id="{{ painting.name}}" uk-modal>
+                            <div class="uk-modal-dialog">
+                                <button class="uk-modal-close-outside" type="button" uk-close></button>
+                                <img class="modal-image uk-text-center" src="{{ asset('assets/img/galleryImages/' ~ painting.galleryImage) }}" alt="Des arbres en automne dans un parc">
+                            </div>                    
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>          
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>            
+            </div>
+            <div class="uk-text-center uk-margin ">
+                <a class="uk-button uk-button-secondary uk-button-large uk-text-center" href="gallery.php">Смотреть галерею</a>
+            </div>
+        </section>
+
+
 </section>
 
 {% endblock %}

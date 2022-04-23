@@ -12,12 +12,12 @@
 	--red: red;
 }
 
-html{
+/* html{
 	background: url('assert/img/background.jpg') center center;
-}
+} */
 
 body{
-    max-width: 84%;
+    /* max-width: 84%; */
     margin: 0 auto;
     font-size: 18px;
 	font-family: 'Open Sans', sans-serif;
@@ -153,7 +153,7 @@ address a:hover {
 .painting img{
 	transition: transform 0.5s;
 	object-fit: cover;
-	height: 100%;
+	height: 220px;
 }
 .painting:hover img{
 	transform: scale(1.1);
@@ -192,17 +192,6 @@ address a:hover {
 	overflow: hidden;
 }
 
-#before {
-    width: 350px;
-	
-}
-
-#after {
-    width: 175px;
-	border-right: 5px solid var(--dark-grey);
-	background: url('img/after.jpg') no-repeat top left;
-	background-size: auto 100%;
-} 
 
 #form{
 	background-color: var(--ligth-grey);

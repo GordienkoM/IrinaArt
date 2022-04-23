@@ -114,6 +114,16 @@ class Painting
      */
     private $keywords;
 
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $alt;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $alt_en;
+
     public function __construct()
     {
         $this->categories = new ArrayCollection();
@@ -417,6 +427,30 @@ class Painting
         if ($this->keywords->removeElement($keyword)) {
             $keyword->removePainting($this);
         }
+
+        return $this;
+    }
+
+    public function getAlt(): ?string
+    {
+        return $this->alt;
+    }
+
+    public function setAlt(string $alt): self
+    {
+        $this->alt = $alt;
+
+        return $this;
+    }
+
+    public function getAltEn(): ?string
+    {
+        return $this->alt_en;
+    }
+
+    public function setAltEn(?string $alt_en): self
+    {
+        $this->alt_en = $alt_en;
 
         return $this;
     }
