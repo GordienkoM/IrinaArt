@@ -19,7 +19,7 @@
     {% endfor %} #}
     <!-- SLIDER -->
             
-            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="autoplay: true" autoplay-interval: 60>
 
                 <ul class="uk-margin-bottom uk-slider-items uk-child-width-1-1 uk-child-width-1-8@xl uk-child-width-1-6@l uk-child-width-1-4@m uk-child-width-1-2@s uk-grid">
                     
@@ -35,7 +35,7 @@
                         <div id="{{ painting.name}}" uk-modal>
                             <div class="uk-modal-dialog">
                                 <button class="uk-modal-close-outside" type="button" uk-close></button>
-                                <img class="modal-image uk-text-center" src="{{ asset('assets/img/galleryImages/' ~ painting.galleryImage) }}" alt="Des arbres en automne dans un parc">
+                                <img class="modal-image uk-text-center" src="{{ asset('assets/img/galleryImages/' ~ painting.galleryImage) }}" alt="{{ painting.alt}}">
                             </div>                    
                         </div>
                     </li>
