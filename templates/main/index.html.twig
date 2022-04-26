@@ -6,50 +6,98 @@
 
 <section id="gallery-section" class="uk-padding">
     <h1 class="uk-padding-top uk-text-center">
-        {% trans %} Персональный сайт художницы Ирины Козловой Кузнецовой {% endtrans %}
+        {% trans %}Персональный сайт художницы Ирины Козловой Кузнецовой{% endtrans %}
     </h1>
     <p class="catch-phrase">
         {% trans %}Картины маслом на холсте{% endtrans %}
     </p>
 
-    {# {% for painting in paintings %}
-        <li class="uk-text-center painting">
-            <img src="{{ asset('assets/img/galleryImages/' ~ painting.galleryImage) }}" alt="{{ painting.alt}}">                  
-        </li>
-    {% endfor %} #}
     <!-- SLIDER -->
+        
+    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="autoplay: true" autoplay-interval: 60>
+
+        <ul class="uk-margin-bottom uk-slider-items uk-child-width-1-1 uk-child-width-1-8@xl uk-child-width-1-6@l uk-child-width-1-4@m uk-child-width-1-2@s uk-grid">
             
-            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="autoplay: true" autoplay-interval: 60>
+            {% for painting in paintings %}
+            <li>
+                <!-- Slider image -->
+                <div class="uk-panel painting uk-text-center">
+                    <a href="#{{ painting.name}}" uk-toggle>
+                        <img src="{{ asset('assets/img/galleryImages/' ~ painting.galleryImage) }}" alt="{{ painting.alt}}">
+                    </a>    
+                </div>
+                <!-- Modal Image with close button -->
+                <div id="{{ painting.name}}" uk-modal>
+                    <div class="uk-modal-dialog">
+                        <button class="uk-modal-close-outside" type="button" uk-close></button>
+                        <img class="modal-image uk-text-center" src="{{ asset('assets/img/galleryImages/' ~ painting.galleryImage) }}" alt="{{ painting.alt}}">
+                    </div>                    
+                </div>
+            </li>
+            {% endfor %}
+        </ul>          
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>            
+    </div>
+    <div class="uk-text-center uk-margin ">
+        <a class="uk-button uk-button-secondary uk-button-large uk-text-center" href="gallery.php">Смотреть галерею</a>
+    </div>
 
-                <ul class="uk-margin-bottom uk-slider-items uk-child-width-1-1 uk-child-width-1-8@xl uk-child-width-1-6@l uk-child-width-1-4@m uk-child-width-1-2@s uk-grid">
-                    
-                    {% for painting in paintings %}
-                    <li>
-                        <!-- Slider image -->
-                        <div class="uk-panel painting uk-text-center">
-                            <a href="#{{ painting.name}}" uk-toggle>
-                                <img src="{{ asset('assets/img/galleryImages/' ~ painting.galleryImage) }}" alt="{{ painting.alt}}">
-                            </a>    
-                        </div>
-                        <!-- Modal Image with close button -->
-                        <div id="{{ painting.name}}" uk-modal>
-                            <div class="uk-modal-dialog">
-                                <button class="uk-modal-close-outside" type="button" uk-close></button>
-                                <img class="modal-image uk-text-center" src="{{ asset('assets/img/galleryImages/' ~ painting.galleryImage) }}" alt="{{ painting.alt}}">
-                            </div>                    
-                        </div>
-                    </li>
-                    {% endfor %}
-                </ul>          
-                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>            
+</section>
+
+<!-- LESSONS SECTION -->
+
+<section class="uk-padding">
+    <h2>{% trans %}Уроки рисования{% endtrans %}</h2>
+    <p class="catch-phrase"></p>
+    <div class="uk-child-width-1-3@m" uk-grid>
+        <div>
+            <div class="uk-card uk-card-default uk-text-center">
+                <div class="uk-card-media-top">
+                    <img src="{{ asset('assets/img/courses_lessons.jpg') }}" alt="Le buste blanc d'un homme  et un dessin de ce buste">
+                </div>
+                <div class="uk-card-body">
+                    <h3>{% trans %}Готовые уроки и курсы{% endtrans %}</h3>
+                    <p>{% trans %}Уроки и курсы составлены с учетом академических знаний, знаний старых мастеров и с добавлением личного опыта. Рассказываю и показываю все пошагово и понятно. Можно приобрести уроки с обратной связью{% endtrans %}
+                    </p>
+                    <a class="uk-button uk-button-secondary uk-button uk-text-center" href="{{ path('home') }}">Подробнее</a>
+                </div>
             </div>
-            <div class="uk-text-center uk-margin ">
-                <a class="uk-button uk-button-secondary uk-button-large uk-text-center" href="gallery.php">Смотреть галерею</a>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-text-center">
+                <div class="uk-card-media-top">
+                    <img src="{{ asset('assets/img/online.jpg') }}" alt="Quatre femmes avec des tableaux dans les main, de l'eau et des bateaux derrière eux">
+                </div>
+                <div class="uk-card-body">
+                    <h3>{% trans %}Онлай-занятия инидивидуальные и в мини-группе{% endtrans %}</h3>
+                    <p>{% trans %}Занимаюсь дистанционно с 2 камер, вы видите меня и работу одновременно.  Работаю с учениками с нуля, новичками и с опытными{% endtrans %}
+                    </p>
+                    <p>{% trans %}Готовлю учеников в спец. ВУЗЫ, колледжи, школы. Ученики со всей России и со всего Мира.   Занимаемся по академической программе, дополняя своим опытом и авторскими разработками.{% endtrans %}
+                    </p>
+                    <p>{% trans %}Есть группы: академический рисунок, скетчинг, натюрморт, портрет, пейзаж, анимэ, комиксы, пластическая анатомия, живопись маслом, японская живопись, роспись, и т. д.{% endtrans %}
+                    </p>
+                    <a class="uk-button uk-button-secondary uk-button uk-text-center" href="{{ path('home') }}">Подробнее</a>
+                </div>
             </div>
-        </section>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-text-center">
+                <div class="uk-card-media-top">
+                    <img src="{{ asset('assets/img/material.jpg') }}" alt="Un enfant qui dessine des hérissons">
+                </div>
+                <div class="uk-card-body">
+                    <h3>{% trans %}Бесплатные уроки и учебный материял{% endtrans %}</h3>
+                    <p>{% trans %}Бесплатные уроки и статьи о многом, что касается живописи, рисунка и композиции. Собрана информация из старинных книг мастеров из библиотек: Российской государственной библиотеке,  библиотека им. Сурикова, научная библиотека Российской академии художеств в Санкт-Петербурге и др.{% endtrans %}
+                    </p>
+                    <p>{% trans %}Забавные, странные и интересные факты о живописи и художниках. Самые разные способы писать картины и необычные сюжеты из биографии известных мастеров.{% endtrans %}
+                    </p>
+                    <a class="uk-button uk-button-secondary uk-button uk-text-center" href="{{ path('home') }}">Подробнее</a>
+                </div>
+            </div>
+        </div>
 
-
+    </div>  
 </section>
 
 {% endblock %}
