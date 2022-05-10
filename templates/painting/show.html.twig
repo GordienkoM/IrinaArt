@@ -9,13 +9,13 @@
 		<div id="image-viewer" class="uk-padding">
 
 			<ul id="main-image" class="uk-switcher">
-			{% for image in painting.paintingImages %}
-				<li class="painting-show"><img src="{{ asset('images/paintings/' ~ image.name) }}" alt="{{ painting.name}}"></li>
+			{% for image in painting.images %}
+				<li class="painting-show"><img src="{{ asset('assets/img/paintings/' ~ image.file) }}" alt="{{ painting.name}}"></li>
 			{% endfor %}
 			</ul>
 			<ul id="viewer-switcher" class="uk-subnav uk-subnav-pill" uk-switcher="connect: #main-image">
-			{% for image in painting.paintingImages %}
-				<li class="painting-show-small"><a href="#"><img src="{{ asset('images/paintings/' ~  image.name) }}" alt="{{ painting.name}}"></a></li>
+			{% for image in painting.images %}
+				<li class="painting-show-small"><a href="#"><img src="{{ asset('assets/img/paintings/' ~  image.file) }}" alt="{{ painting.name}}"></a></li>
 			{% endfor %}
 			</ul>
 
@@ -23,24 +23,24 @@
 		<div class="uk-padding">
 			<div>
 				<h1 class="">{{painting.name}}</h1>
-				<div>{% trans %}художник Ирина Козлова Кузнецова{% endtrans %}</div>
+				<div>{% trans %}Художник Ирина Козлова Кузнецова{% endtrans %}</div>
 				<table class="uk-table">
 					<tr>
-						<td></td>
-						<td>{{ painting.priceOriginal }} rubles</td>
-						<td><a class="uk-button uk-button-secondary uk-button-small" href="{{ path('cart_painting_add', {'id': painting.id,'type': 'Original'}) }}" >Ajouter au panier</a></td>
+						<td>{% trans %}Оригинал картины{% endtrans %}</td>
+						<td>{{ painting.priceOriginal }} {% trans %}рублей{% endtrans %}</td>
+						<td><a class="uk-button uk-button-secondary uk-button-small" href="{{ path('cart_painting_add', {'id': painting.id,'type': 'Original'}) }}" >{% trans %}Добавить в корзину{% endtrans %}</a></td>
 					</tr>
 					<tr>
-						<td></td>
-						<td>{{ painting.priceReproduction }} rubles</td>
-						<td><a class="uk-button uk-button-secondary uk-button-small" href="{{ path('cart_painting_add', {'id': painting.id,'type': 'Reproduction'}) }}" >Ajouter au panier</a></td>
+						<td>{% trans %}Печать картины{% endtrans %}</td>
+						<td>{{ painting.pricePrint }} {% trans %}рублей{% endtrans %}</td>
+						<td><a class="uk-button uk-button-secondary uk-button-small" href="{{ path('cart_painting_add', {'id': painting.id,'type': 'Reproduction'}) }}" >{% trans %}Добавить в корзину{% endtrans %}</a></td>
 					</tr>
 				</table>
 				<p>{% trans %}Доставка по России бесплатна{% endtrans %}<br>
 				{% trans %}Доставка по миру обговаривается отдельно{% endtrans %}
 				</p>
 				<p> {% trans %}Артикл{% endtrans %}: {{painting.id}} <br>
-				{% trans %}Размер{% endtrans %}: {{ painting.hight}} X {{ painting.width }} cm <br>
+				{% trans %}Размер{% endtrans %}: {{ painting.hight}} X {{ painting.width }} {% trans %}см{% endtrans %} <br>
 				{% trans %}Материал{% endtrans %}: {{ painting.material }}<br>
 				{% trans %}Год создания{% endtrans %}: {{ painting.creationYear }}
 				</p>
