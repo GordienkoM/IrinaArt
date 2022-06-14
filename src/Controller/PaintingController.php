@@ -12,7 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class PaintingController extends AbstractController
 {
     /**
-     * @Route("/painting", name="app_painting")
+     * @Route("/painting", name="paintings")
      */
     public function index(PaintingRepository $paintingRepository, CategoryRepository $categoryRepository): Response
     {

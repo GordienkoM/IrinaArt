@@ -36,4 +36,12 @@ class MainController extends AbstractController
         // On revient sur la page précédente
         return $this->redirect($request->headers->get('referer'));
     }
+
+    /**
+     * @Route("/home/artist", name="about_artist")
+     */
+    public function artist(): Response
+    {
+        return $this->render('main/artist.html.twig');
+    }
 }

@@ -201,16 +201,15 @@ address a:hover {
 /* ARTIST SECTION         
 /*-------------------------*/
 
-#artist-quote{
+#artist-section{
 	background-color: var(--ligth-grey);
-	font-style: italic;
-	padding: 0.8em 1em;
-	font-size: 20px;
 }
 
-#artist-quote p{
+#artist-section p{
     margin-block-start: 0.5em;
     margin-block-end: 0.5em;
+	font-style: italic;
+	font-size: 20px;
 
 }
 
