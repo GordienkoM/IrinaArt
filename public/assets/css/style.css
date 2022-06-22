@@ -409,4 +409,49 @@ footer div{
 
 }
 
+/*-------------------------*/
+/* Paintings      
+/*-------------------------*/
+
+#image-viewer{
+	height: 450px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+#main-image{
+	flex: 1 0 auto;
+	min-height: 75%;
+}
+
+#viewer-switcher{
+	height: 80px;
+	flex-shrink: 0;
+	
+}
+
+.painting-show{
+	width: 450px;
+	height: 450px;
+	text-align: center;
+	background-color: rgb(169, 169, 169);
+}
+
+.painting-show img{
+	object-fit: contain;
+	height: 100%;
+}
+
+.painting-show-small{
+	width: 80px;
+	height: 80px;
+	box-sizing: content-box;
+}
+
+.painting-show-small img{
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
 
