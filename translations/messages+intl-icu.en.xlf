@@ -41,6 +41,184 @@
         <source>Картины маслом на холсте</source>
         <target>Oil paintings on canvas</target>
       </trans-unit>
+      <trans-unit id="pt_k26a" resname="Уроки рисования">
+        <source>Уроки рисования</source>
+        <target>Drawing lessons</target>
+      </trans-unit>
+      <trans-unit id="2N7XvHd" resname="Готовые уроки и курсы">
+        <source>Готовые уроки и курсы</source>
+        <target>Ready lessons and courses</target>
+      </trans-unit>
+      <trans-unit id="y86SJvN" resname="Уроки и курсы составлены с учетом академических знаний, знаний старых мастеров и с добавлением личного опыта.">
+        <source>Уроки и курсы составлены с учетом академических знаний, знаний старых мастеров и с добавлением личного опыта.</source>
+        <target>Lessons and courses are based on academic knowledge, the knowledge of the old masters and with the addition of personal experience.</target>
+      </trans-unit>
+      <trans-unit id="lo0WkVz" resname="Научу как нарисовать куб, призму, конус, шар, цилиндр и другие гипсовые фигуры, интерьер, портреты, фигуру человека, гипсовые головы, пейзаж.&#10;                     Получите знания по пластической анатомии, воздушной и линейной перспективе,свето-теневой передачи объектов.">
+        <source>Научу как нарисовать куб, призму, конус, шар, цилиндр и другие гипсовые фигуры, интерьер, портреты, фигуру человека, гипсовые головы, пейзаж.
+                     Получите знания по пластической анатомии, воздушной и линейной перспективе,свето-теневой передачи объектов.</source>
+        <target>I will teach you how to draw a cube, a prism, a cone, a sphere, a cylinder and other plaster figures, interiors, portraits, a human figure, plaster heads, a landscape.
+                      Gain knowledge of plastic anatomy, aerial and linear perspective, light-shadow rendering of objects</target>
+      </trans-unit>
+      <trans-unit id="n9FPKiE" resname="Можете приобрести уроки живописнойи акварелью гуашью акрилом темпирой маслом пастелью цветными карандашами в различных техниках и для разного возроста.">
+        <source>Можете приобрести уроки живописнойи акварелью гуашью акрилом темпирой маслом пастелью цветными карандашами в различных техниках и для разного возроста.</source>
+        <target>You can purchase lessons in painting and watercolor gouache acrylic tempira oil pastel colored pencils in various techniques and for different ages.</target>
+      </trans-unit>
+      <trans-unit id="rkHlu3k" resname="Рассказываю и показываю все пошагово и понятно. Можно приобрести уроки с обратной связью.">
+        <source>Рассказываю и показываю все пошагово и понятно. Можно приобрести уроки с обратной связью.</source>
+        <target>I tell and show everything step by step and clearly. You can buy lessons with feedback.</target>
+      </trans-unit>
+      <trans-unit id="WVif4qV" resname="Подробнее">
+        <source>Подробнее</source>
+        <target>More</target>
+      </trans-unit>
+      <trans-unit id="KPPYG6M" resname="Онлай-занятия инидивидуальные и в мини-группе">
+        <source>Онлай-занятия инидивидуальные и в мини-группе</source>
+        <target>Online lessons individual and in a mini-group</target>
+      </trans-unit>
+      <trans-unit id="ekHTBPM" resname="Занимаюсь дистанционно с 2 камер, вы видите меня и работу одновременно.  Работаю с учениками с нуля, новичками и с опытными">
+        <source>Занимаюсь дистанционно с 2 камер, вы видите меня и работу одновременно.  Работаю с учениками с нуля, новичками и с опытными</source>
+        <target>I work remotely with 2 cameras, you see me and work at the same time. I work with students from scratch, beginners and experienced</target>
+      </trans-unit>
+      <trans-unit id="zXaBMLS" resname="Пошагово все объясняю и рисую вместе с вами, легко и понятно, показывая и объясняя каждый шаг, как что делать. Поэтому у всех получается, даже если никогда не рисовали.">
+        <source>Пошагово все объясняю и рисую вместе с вами, легко и понятно, показывая и объясняя каждый шаг, как что делать. Поэтому у всех получается, даже если никогда не рисовали.</source>
+        <target>I explain everything step by step and draw with you, easily and clearly, showing and explaining each step, how to do it. Therefore, everyone succeeds, even if they have never painted.</target>
+      </trans-unit>
+      <trans-unit id="XDP22q5" resname="Готовлю учеников в спец. ВУЗЫ, колледжи, школы. Ученики со всей России и со всего Мира.   Занимаемся по академической программе, дополняя своим опытом и авторскими разработками.">
+        <source>Готовлю учеников в спец. ВУЗЫ, колледжи, школы. Ученики со всей России и со всего Мира.   Занимаемся по академической программе, дополняя своим опытом и авторскими разработками.</source>
+        <target>I prepare students in special Universities, colleges, schools. Students from all over Russia and from all over the world. We are engaged in an academic program, supplementing with our experience and author's developments.</target>
+      </trans-unit>
+      <trans-unit id="sD_HgYB" resname="Есть группы: академический рисунок, скетчинг, натюрморт, портрет, пейзаж, анимэ, комиксы, пластическая анатомия, живопись маслом, японская живопись, роспись, и т. д.">
+        <source>Есть группы: академический рисунок, скетчинг, натюрморт, портрет, пейзаж, анимэ, комиксы, пластическая анатомия, живопись маслом, японская живопись, роспись, и т. д.</source>
+        <target>There are groups: academic drawing, sketching, still life, portrait, landscape, anime, comics, plastic anatomy, oil painting, Japanese painting, painting, etc.</target>
+      </trans-unit>
+      <trans-unit id="nANnqp6" resname="Бесплатные уроки и учебный материял">
+        <source>Бесплатные уроки и учебный материял</source>
+        <target>Free lessons and study material</target>
+      </trans-unit>
+      <trans-unit id="eaUfHTD" resname="Если вам нравиться учиться обучаться дома, то здесь вы можете погрузиться в мир живописи и совершенно бесплатно пройти онлайн-курс &quot;Азы рисования&quot;.">
+        <source>Если вам нравиться учиться обучаться дома, то здесь вы можете погрузиться в мир живописи и совершенно бесплатно пройти онлайн-курс "Азы рисования".</source>
+        <target>If you like learning how to study at home, then here you can immerse yourself in the world of painting and take the online course "The Basics of Drawing" for free.</target>
+      </trans-unit>
+      <trans-unit id="zuYv4QJ" resname="Бесплатные уроки и статьи о многом, что касается живописи, рисунка и композиции. Собрана информация из старинных книг мастеров из библиотек: Российской государственной библиотеке,  библиотека им. Сурикова, научная библиотека Российской академии художеств в Санкт-Петербурге и др.">
+        <source>Бесплатные уроки и статьи о многом, что касается живописи, рисунка и композиции. Собрана информация из старинных книг мастеров из библиотек: Российской государственной библиотеке,  библиотека им. Сурикова, научная библиотека Российской академии художеств в Санкт-Петербурге и др.</source>
+        <target>Free lessons and articles about everything related to painting, drawing and composition. Collected information from the old books of masters from the libraries: Russian State Library, Library. Surikov, scientific library of the Russian Academy of Arts in St. Petersburg, etc.</target>
+      </trans-unit>
+      <trans-unit id="OsGatVw" resname="Забавные, странные и интересные факты о живописи и художниках. Самые разные способы писать картины и необычные сюжеты из биографии известных мастеров.">
+        <source>Забавные, странные и интересные факты о живописи и художниках. Самые разные способы писать картины и необычные сюжеты из биографии известных мастеров.</source>
+        <target>Funny, strange and interesting facts about painting and artists. A variety of ways to paint pictures and unusual stories from the biography of famous masters.</target>
+      </trans-unit>
+      <trans-unit id="C9aTTml" resname="Ирина Козлова-Кузнецова - действующий художник - живописец, преподаватель рисования.">
+        <source>Ирина Козлова-Кузнецова - действующий художник - живописец, преподаватель рисования.</source>
+        <target>Irina Kozlova-Kuznetsova is an active artist - painter, drawing teacher.</target>
+      </trans-unit>
+      <trans-unit id="JPP5qd_" resname="Активный участник множества областных, городских и региональных выставок.">
+        <source>Активный участник множества областных, городских и региональных выставок.</source>
+        <target>An active participant in many regional, city and regional exhibitions.</target>
+      </trans-unit>
+      <trans-unit id="abWaRcH" resname="«Очень люблю писать природу и ездить на пленэры. Стараюсь передать ощущение и восхищение божественного мироздания. Пропускаю все через себя и выплескиваю на холст. Так же люблю писать натюрморты и портреты. Красота цветов завораживает.">
+        <source>«Очень люблю писать природу и ездить на пленэры. Стараюсь передать ощущение и восхищение божественного мироздания. Пропускаю все через себя и выплескиваю на холст. Так же люблю писать натюрморты и портреты. Красота цветов завораживает.</source>
+        <target>“I love to paint nature and go to the open air. I try to convey the feeling and admiration of the divine universe. I pass everything through myself and splash out onto the canvas. I also like to paint still lifes and portraits. The beauty of flowers is mesmerizing..</target>
+      </trans-unit>
+      <trans-unit id="v_rw0p7" resname="Очень хочется, чтобы зритель почувствовал энергию красоты через картины!»">
+        <source>Очень хочется, чтобы зритель почувствовал энергию красоты через картины!»</source>
+        <target>I really want the viewer to feel the energy of beauty through the pictures!”</target>
+      </trans-unit>
+      <trans-unit id="IVgWv0I" resname="Все">
+        <source>Все</source>
+        <target>All</target>
+      </trans-unit>
+      <trans-unit id="XmDYmf2" resname="Вы можите купить картину">
+        <source>Вы можите купить картину</source>
+        <target>You can buy a painting</target>
+      </trans-unit>
+      <trans-unit id="9keAW3j" resname="Купить">
+        <source>Купить</source>
+        <target>Buy</target>
+      </trans-unit>
+      <trans-unit id="gbmsOB4" resname="Посмотреть цену">
+        <source>Посмотреть цену</source>
+        <target>View price</target>
+      </trans-unit>
+      <trans-unit id="nbd.p47" resname="Художник Ирина Козлова Кузнецова">
+        <source>Художник Ирина Козлова Кузнецова</source>
+        <target>Artist Irina Kozlova Kuznetsova</target>
+      </trans-unit>
+      <trans-unit id="QC2Nmjy" resname="Оригинал картины">
+        <source>Оригинал картины</source>
+        <target>Original painting</target>
+      </trans-unit>
+      <trans-unit id="zi_n.t8" resname="рублей">
+        <source>рублей</source>
+        <target>rubles</target>
+      </trans-unit>
+      <trans-unit id="yRv.27z" resname="Добавить в корзину">
+        <source>Добавить в корзину</source>
+        <target>Add to Basket</target>
+      </trans-unit>
+      <trans-unit id="qNceWSn" resname="Печать картины">
+        <source>Печать картины</source>
+        <target>Painting print</target>
+      </trans-unit>
+      <trans-unit id="1L6d76m" resname="Доставка по России бесплатна">
+        <source>Доставка по России бесплатна</source>
+        <target>Delivery in Russia is free</target>
+      </trans-unit>
+      <trans-unit id="Co53Zi8" resname="Доставка по миру обговаривается отдельно">
+        <source>Доставка по миру обговаривается отдельно</source>
+        <target>Delivery around the world is negotiated separately</target>
+      </trans-unit>
+      <trans-unit id="JKx7yEU" resname="Артикл">
+        <source>Артикл</source>
+        <target>Article</target>
+      </trans-unit>
+      <trans-unit id="VyCV1Ke" resname="Размер">
+        <source>Размер</source>
+        <target>Size</target>
+      </trans-unit>
+      <trans-unit id="VX9M0sb" resname="см">
+        <source>см</source>
+        <target>cm</target>
+      </trans-unit>
+      <trans-unit id="fgBwP8E" resname="Материал">
+        <source>Материал</source>
+        <target>Material</target>
+      </trans-unit>
+      <trans-unit id="Q_.FXz2" resname="Год создания">
+        <source>Год создания</source>
+        <target>Year of creation</target>
+      </trans-unit>
+      <trans-unit id="Gl_XldU" resname="Вы можеите купить картины Ирины Козловой Кузнецовой">
+        <source>Вы можеите купить картины Ирины Козловой Кузнецовой</source>
+        <target>You can buy paintings by Irina Kozlova Kuznetsova</target>
+      </trans-unit>
+      <trans-unit id="2BNOBt2" resname="Смотреть галерею">
+        <source>Смотреть галерею</source>
+        <target>View gallery</target>
+      </trans-unit>
+      <trans-unit id="C.D8sv9" resname="Информация">
+        <source>Информация</source>
+        <target>Information</target>
+      </trans-unit>
+      <trans-unit id="kuTiUVT" resname="Картинная галерея">
+        <source>Картинная галерея</source>
+        <target>Picture gallery</target>
+      </trans-unit>
+      <trans-unit id="Bhb8gzp" resname="Связаться с художником">
+        <source>Связаться с художником</source>
+        <target>Contact the artist</target>
+      </trans-unit>
+      <trans-unit id="AT5nLJ2" resname="Правовая информация">
+        <source>Правовая информация</source>
+        <target>Legal information</target>
+      </trans-unit>
+      <trans-unit id="O6jqpdY" resname="Политика конфиденциальности">
+        <source>Политика конфиденциальности</source>
+        <target>Privacy Policy</target>
+      </trans-unit>
+      <trans-unit id="Xc6wsQu" resname="Присоединяйтесь к нам">
+        <source>Присоединяйтесь к нам</source>
+        <target>Join us</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
