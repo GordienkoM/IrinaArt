@@ -10,7 +10,15 @@
         <ul class="uk-subnav uk-subnav-pill uk-flex uk-flex-center ">
             <li class="uk-active" uk-filter-control><a href="#">{% trans %}Все{% endtrans %}</a></li>
             {% for category in categories %}
-                <li uk-filter-control="[data-color='{{category.name}}']"><a href="#">{{category.name}}</a></li>
+                <li uk-filter-control="[data-color='{{category.name}}']">
+                    <a href="#">
+                        {% if app.request.locale == 'en' %} 
+                            {{category.nameEn}}
+                        {% else %}
+                            {{category.name}}
+                        {% endif %}  
+                    </a>
+                </li>
             {% endfor %}
         </ul>
         <p class="uk-text-large uk-text-center">{% trans %}Вы можите купить картину{% endtrans %}</p>
