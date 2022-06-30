@@ -168,34 +168,6 @@ address a:hover {
 	width: max-content;
 }
 
-/*-------------------------*/
-/* OFFER SECTION        
-/*-------------------------*/
-
-#offer-section{
-	border-top: 1px solid var(--grey);
-	border-bottom: 1px solid var(--grey);
-}
-
-#myslide {
-    width: 350px;
-	height: 550px;
-	position: relative;
-	overflow: hidden;
-}
-
-#before, #after {
-	height: 550px;
-	position: absolute;
-	left: 0;
-	top: 0;
-	overflow: hidden;
-}
-
-
-#form{
-	background-color: var(--ligth-grey);
-}
 
 /*-------------------------*/
 /* ARTIST SECTION         
@@ -325,16 +297,6 @@ footer div{
 	padding: 2em; 
 }
 
-/*-------------------------*/
-/* MESSAGE         
-/*-------------------------*/
-
-.message{
-	font-weight:700;
-	text-align:center;
-	font-size: 36px;
-	color: rgb(0, 92, 35);
-}
 
 
 /*-------------------------*/
@@ -412,6 +374,10 @@ footer div{
 /*-------------------------*/
 /* Paintings      
 /*-------------------------*/
+
+#gallery{
+	background-color: var(--grey);
+}
 
 #image-viewer{
 	height: 450px;
