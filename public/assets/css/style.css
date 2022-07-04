@@ -376,7 +376,7 @@ footer div{
 /*-------------------------*/
 
 #gallery{
-	background-color: var(--grey);
+	background-color: var(--grey) !important;
 }
 
 #image-viewer{
