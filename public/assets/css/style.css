@@ -20,7 +20,8 @@ body{
     /* max-width: 84%; */
     margin: 0 auto;
     font-size: 18px;
-	font-family: 'Open Sans', sans-serif;
+	/* font-family: 'Open Sans', sans-serif; */
+	font-family: 'Raleway', sans-serif;
 	background-color: var(--white);
 	box-shadow: 0px 0px 15px rgba(129, 129, 129, 0.5);
 }
@@ -132,6 +133,7 @@ address a:hover {
 
 .uk-navbar-nav li  a{
 	/* font-family: 'Alegreya SC'; */
+	font-family: 'Raleway', sans-serif;
 	font-size: 20px;
 	color: var(--black-text);
 }
@@ -168,6 +170,9 @@ address a:hover {
 	width: max-content;
 }
 
+.margin-top{
+	margin-top: 25px;
+}
 
 /*-------------------------*/
 /* ARTIST SECTION         
@@ -272,6 +277,7 @@ footer div{
 
 .painting-titre {
 	/* font-family: 'Alegreya SC', serif; */
+	font-family: 'Raleway', sans-serif;
 	font-weight:700;
 	text-align:center;
 	font-size: 20px;

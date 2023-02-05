@@ -6,10 +6,12 @@
         <link rel="icon" href="{{ asset('assets/img/favicon.png') }}">
         
         <!-- FONTS: Open Sans et Alegreya SC -->
+        {# <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">  #}
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
-
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <!-- UIkit CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.13.7/dist/css/uikit.min.css" />
 
@@ -96,7 +98,7 @@
                         <li class="uk-navbar-item">
                             <a href="{{ path('about_artist') }}">{% trans %}О художнике  {% endtrans %}</a>
                         </li>
-
+{# 
                         <li class="uk-navbar-item">
                             <a href="{{ path('home') }}">{% trans %}Учебный материал  {% endtrans %}</a>
                         </li>
@@ -108,7 +110,7 @@
                         </li>
                         <li class="uk-navbar-item">
                             <a href="{{ path('home') }}">{% trans %}Корзина{% endtrans %}</a>
-                        </li>
+                        </li> #}
                     </ul>
                     <a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
                 </div>
@@ -126,7 +128,7 @@
                         <li class="uk-navbar-item">
                             <a href="{{ path('home') }}">{% trans %}О художнике  {% endtrans %}</a>
                         </li>
-
+{# 
                         <li class="uk-navbar-item">
                             <a href="{{ path('home') }}">{% trans %}Учебный материал  {% endtrans %}</a>
                         </li>
@@ -138,7 +140,7 @@
                         </li>
                         <li class="uk-navbar-item">
                             <a href="{{ path('home') }}">{% trans %}Корзина{% endtrans %}</a>
-                        </li>
+                        </li> #}
                     </ul>
                 </div>
             </div>
