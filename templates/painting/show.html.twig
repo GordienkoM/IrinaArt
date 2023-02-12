@@ -6,7 +6,7 @@
 
 {% block body %}
 
-	<div id = "first-part-painting" class="uk-flex uk-flex-center grey">
+	<div id="first-part-painting" class="uk-flex uk-flex-center grey">
 		<div id="image-viewer" class="uk-padding">
 
 			<ul id="main-image" class="uk-switcher">
@@ -26,49 +26,58 @@
 		<div class="uk-padding">
 			<div>
 				<h1 class="">{{painting.name}}</h1>
-				<div>{% trans %}Художник Ирина Козлова Кузнецова{% endtrans %}</div>
-				<table class="uk-table">
-					<tr>
-						<td>{% trans %}Оригинал картины{% endtrans %}</td>
-						<td>{{ painting.priceOriginal }}
-							{% trans %}рублей{% endtrans %}</td>
-						<td>
-							<a class="uk-button uk-button-secondary uk-button-small" href="{{ path('cart_painting_add', {'id': painting.id,'type': 'Original'}) }}">{% trans %}Добавить в корзину{% endtrans %}</a>
-						</td>
-					</tr>
-					<tr>
-						<td>{% trans %}Печать картины{% endtrans %}</td>
-						<td>{{ painting.pricePrint }}
-							{% trans %}рублей{% endtrans %}</td>
-						<td>
-							<a class="uk-button uk-button-secondary uk-button-small" href="{{ path('cart_painting_add', {'id': painting.id,'type': 'Reproduction'}) }}">{% trans %}Добавить в корзину{% endtrans %}</a>
-						</td>
-					</tr>
-				</table>
-				<p>{% trans %}Доставка по России бесплатна{% endtrans %}<br>
-					{% trans %}Доставка по миру обговаривается отдельно{% endtrans %}
-				</p>
-				<p>
-					{% trans %}Артикл{% endtrans %}:
-					{{painting.id}}
-					<br>
-					{% trans %}Размер{% endtrans %}:
-					{{ painting.hight}}
-					X
-					{{ painting.width }}
-					{% trans %}см{% endtrans %}
-					<br>
-					{% trans %}Материал{% endtrans %}:
-					{{ painting.material }}<br>
-					{% trans %}Год создания{% endtrans %}:
-					{{ painting.creationYear }}
+				<div>{% trans %}Художник Ирина Козлова - Кузнецова{% endtrans %}</div>
+				{# <table class="uk-table">
+																																	<tr>
+																																		<td>{% trans %}Оригинал картины{% endtrans %}</td>
+																																		<td>{{ painting.priceOriginal }}
+																																			{% trans %}рублей{% endtrans %}</td>
+																																		<td>
+																																			<a class="uk-button uk-button-secondary uk-button-small" href="{{ path('cart_painting_add', {'id': painting.id,'type': 'Original'}) }}">{% trans %}Добавить в корзину{% endtrans %}</a>
+																																		</td>
+																																	</tr>
+																																	<tr>
+																																		<td>{% trans %}Печать картины{% endtrans %}</td>
+																																		<td>{{ painting.pricePrint }}
+																																			{% trans %}рублей{% endtrans %}</td>
+																																		<td>
+																																			<a class="uk-button uk-button-secondary uk-button-small" href="{{ path('cart_painting_add', {'id': painting.id,'type': 'Reproduction'}) }}">{% trans %}Добавить в корзину{% endtrans %}</a>
+																																		</td>
+																																	</tr>
+																																</table> #}
+
+				{# <p>{% trans %}Доставка по России бесплатна{% endtrans %}<br>
+													{% trans %}Доставка по миру обговаривается отдельно{% endtrans %}
+												</p> #}
+				<div>
+					<p class="uk-margin-top">
+						{% trans %}Артикл{% endtrans %}:
+						{{painting.id}}
+					</p>
+					<p class="number">
+						{% trans  %}Размер{% endtrans %}:
+						{{ painting.hight}}
+						X
+						{{ painting.width }}
+						{% trans %}см{% endtrans %}
+						<br>
+						{% trans %}Материал{% endtrans %}:
+						{{ painting.material }}
+						<br>
+						{% trans %}Год создания{% endtrans %}:
+						{{ painting.creationYear }}
+					</p>
+				</div>
+
+				<p>{{ painting.priceOriginal }}
+					{% trans %}рублей{% endtrans %}
 				</p>
 			</div>
 		</div>
 	</div>
-	<p class="uk-text-italic uk-text-large uk-text-center">
+	<p class="uk-text-italic uk-text-large uk-text-center uk-margin-large">
 		{{painting.discription}}</p>
-	<hr>
-	<p class="uk-padding">{% trans %}Вы можеите купить картины Ирины Козловой Кузнецовой{% endtrans %}</p>
+	{# <hr>
+								<p class="uk-padding">{% trans %}Вы можеите купить картины Ирины Козловой Кузнецовой{% endtrans %}</p> #}
 
 {% endblock %}
