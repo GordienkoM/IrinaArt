@@ -124,6 +124,11 @@ class Painting
      */
     private $alt_en;
 
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $isSlide;
+
     public function __construct()
     {
         $this->categories = new ArrayCollection();
@@ -451,6 +456,18 @@ class Painting
     public function setAltEn(?string $alt_en): self
     {
         $this->alt_en = $alt_en;
+
+        return $this;
+    }
+
+    public function getIsSlide(): ?bool
+    {
+        return $this->isSlide;
+    }
+
+    public function setIsSlide(?bool $isSlide): self
+    {
+        $this->isSlide = $isSlide;
 
         return $this;
     }
