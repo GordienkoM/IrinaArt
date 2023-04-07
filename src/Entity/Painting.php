@@ -129,6 +129,11 @@ class Painting
      */
     private $isSlide;
 
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $number;
+
     public function __construct()
     {
         $this->categories = new ArrayCollection();
@@ -468,6 +473,18 @@ class Painting
     public function setIsSlide(?bool $isSlide): self
     {
         $this->isSlide = $isSlide;
+
+        return $this;
+    }
+
+    public function getNumber(): ?int
+    {
+        return $this->number;
+    }
+
+    public function setNumber(?int $number): self
+    {
+        $this->number = $number;
 
         return $this;
     }
