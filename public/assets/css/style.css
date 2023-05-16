@@ -4,26 +4,29 @@
 
 :root {
 	--black-text: #000000;
-	--grey-base: #777777;
-	--dark-grey: #818181;
+	--grey-text: #2f2f2f;
+	--grey-base: #BCBDBD;
+	--dark-grey: #BCBDBD;
 	--grey: #EEEEEE;
 	--ligth-grey: #F6F6F6;
 	--white: white;
 	--red: red;
 }
 
-/* html{
-	background: url('assert/img/background.jpg') center center;
-} */
+html {
+	background: url('../img/Palitra.png') no-repeat top left;
+	background-position: 30px 100px;
+}
 
 body {
-	/* max-width: 84%; */
-	margin: 0 auto;
-	font-size: 18px;
-	/* font-family: 'Open Sans', sans-serif; */
-	font-family: 'Raleway', sans-serif;
-	background-color: var(--white);
-	box-shadow: 0px 0px 15px rgba(129, 129, 129, 0.5);
+
+	font-size: 19px;
+
+	font-family: 'AGLettericaCondensedLight', sans-serif;
+	/* background-color: var(--white); */
+
+	/* background: url('../img/Palitra.png') no-repeat top left; */
+
 }
 
 .grey {
@@ -35,37 +38,31 @@ body {
 }
 
 .uk-button-secondary {
+	color: var(--black-text);
 	background-color: var(--grey-base);
+	font-family: 'Open Sans Light', sans-serif;
+	font-size: 20px;
 }
 
-
-.number {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 17px;
-}
 
 /*-------------------------*/
 /* TITLES          
 /*-------------------------*/
 
 
-/* h1, h2, h3, nav a{
-	font-family: 'Alegreya SC', serif;
-} */
-
 h1,
 h2,
 h3 {
-	font-weight: 600;
+	/* font-weight: 600; */
 	text-align: center;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Open Sans Light', sans-serif;
 	color: var(--grey-base);
 }
 
 h1,
 h2 {
-	font-size: 20px;
-	/* color: var(--black-text); */
+	font-size: 32px;
+	color: var(--grey-text);
 	text-transform: uppercase;
 }
 
@@ -109,7 +106,8 @@ ul {
 
 #preheader {
 	background-color: var(--grey-base);
-	height: 50px;
+	font-family: 'Open Sans Light', sans-serif;
+	height: 66px;
 }
 
 #preheader li,
@@ -120,7 +118,7 @@ address {
 
 #preheader li img,
 .icone img {
-	height: 26px;
+	height: 40px;
 }
 
 address a,
@@ -146,31 +144,39 @@ address a,
 /* HEADER             
 /*-------------------------*/
 
-nav {
-	background-color: var(--white);
-}
+/* nav {
+	background: url('../img/Palitra.png') no-repeat top left
+} */
 
 address a:hover {
 	color: var(--dark-grey);
 	text-decoration: none;
 }
 
-/* .logo-phrase {
-	font-family: 'Marck Script', cursive;
-} */
 
 .logo-phrase {
-	font-family: 'Caveat', cursive
+
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-left: 30px;
+
 }
 
-#logo {
-	height: 120px;
+.logo-phrase-top {
+	font-family: 'Open Sans Light', sans-serif;
+	font-size: 30px;
 }
+
+.logo-phrase-bottom {
+	font-family: 'AGLettericaCondensedLight', sans-serif;
+	font-size: 18px;
+}
+
 
 .uk-navbar-nav li a {
-	/* font-family: 'Alegreya SC'; */
-	font-family: 'Raleway', sans-serif;
-	font-size: 20px;
+
+	font-family: 'AGLettericaCondensedLight', sans-serif;
+	font-size: 19px;
 	color: var(--black-text);
 }
 
@@ -178,20 +184,54 @@ address a:hover {
 /* GALLERY SECTION         
 /*-------------------------*/
 
-#gallery-section {
-	background-color: var(--grey);
+.slider {
+
+	margin-right: 100px;
+	margin-left: 100px;
+
+}
+
+
+
+.uk-light .uk-slidenav {
+	color: #222;
+}
+
+
+
+
+.gallery-painting {
+	text-align: center;
+	border-right: 2px solid var(--dark-grey);
+	/* border-bottom: 2px solid var(--dark-grey); */
 }
 
 .painting {
-	/* height:300px; */
+	
 	width: auto;
 	overflow: hidden;
+}
+
+
+.gallery-painting-image {
+
+	padding-left: 40px;
+	padding-right: 40px;
+
 }
 
 .painting img {
 	transition: transform 0.5s;
 	object-fit: cover;
 	height: 250px;
+}
+
+.painting hr {
+	margin-left: 40px;
+	margin-right: 40px;
+	padding-bottom: 30px;
+	/* background-color: var(--dark-grey); */
+	border-bottom: 2px solid var(--dark-grey);
 }
 
 .painting:hover img {
@@ -216,7 +256,7 @@ address a:hover {
 /*-------------------------*/
 
 #artist-section {
-	background-color: var(--ligth-grey);
+	background-color: var(--white);
 }
 
 #artist-section p {
@@ -231,7 +271,15 @@ address a:hover {
 /* FOOTER           
 /*-------------------------*/
 
+footer {
+
+	font-family: 'Open Sans Light', sans-serif;
+}
+
+
+
 footer div {
+
 	color: var(--white);
 }
 

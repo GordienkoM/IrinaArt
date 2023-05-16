@@ -81,7 +81,7 @@
 										<a href="tel:+79518726432" uk-tooltip="title: +79518726432; pos: bottom"><img src="{{ asset('assets/img/social-media/telephone.png') }}" alt="icône de téléphone"></a>
 									</div>
 									<div class="uk-visible@m">
-										<a href="tel:+79518726432" class="number">+79518726432</a>
+										<a href="tel:+79518726432">+79518726432</a>
 									</div>
 								</div>
 							</address>
@@ -109,14 +109,14 @@
 						<nav class="uk-navbar">
 							<div class="uk-navbar-left">
 								<ul class="uk-navbar-nav">
-									<li
-										class="uk-active">
-										{# <a class="uk-navbar-item uk-logo"  href="{{ path('home') }}">
-																																																			<img id="logo" src="{{ asset('assets/img/logo.png') }}" alt="Irina Art">
-																																																		</a> #}
+									<li class="uk-active">
 										<a class="uk-navbar-item uk-logo" href="{{ path('home') }}">
-											<p class="uk-pudding logo-phrase">
-												Художник Ирина Козлова - Кузнецова</p>
+											<div class="logo-phrase">
+												<div class="logo-phrase-top">
+													Ирина Козлова - Кузнецова</div>
+												<div class="logo-phrase-bottom">
+													художник-живописец</div>
+											</div>
 										</a>
 									</li>
 								</ul>
@@ -131,22 +131,19 @@
 											{% endtrans %}</a>
 									</li>
 									<li class="uk-navbar-item">
+										<a href="{{ path('home') }}">{% trans %}Уроки рисования{% endtrans %}</a>
+									</li>
+									<li class="uk-navbar-item">
 										<a href="{{ path('about_artist') }}">{% trans %}О художнике
 											{% endtrans %}</a>
 									</li>
-									{# 
-																																																																								                        <li class="uk-navbar-item">
-																																																																								                            <a href="{{ path('home') }}">{% trans %}Учебный материал  {% endtrans %}</a>
-																																																																								                        </li>
-																																																																								                        <li class="uk-navbar-item">
-																																																																								                            <a href="{{ path('home') }}">{% trans %}Контакты{% endtrans %}</a>
-																																																																								                        </li>
-																																																																								                        <li class="uk-navbar-item">
-																																																																								                            <a href="{{ path('home') }}">{% trans %}Доставка{% endtrans %}</a>
-																																																																								                        </li>
-																																																																								                        <li class="uk-navbar-item">
-																																																																								                            <a href="{{ path('home') }}">{% trans %}Корзина{% endtrans %}</a>
-																																																																								                        </li> #}
+
+									<li class="uk-navbar-item">
+										<a href="{{ path('home') }}">{% trans %}Фотографии{% endtrans %}</a>
+									</li>
+									<li class="uk-navbar-item">
+										<a href="{{ path('home') }}">{% trans %}Контакты{% endtrans %}</a>
+									</li>
 								</ul>
 								<a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
 							</div>
@@ -167,24 +164,26 @@
 												{% endtrans %}</a>
 										</li>
 										{# 
-																																																																																                        <li class="uk-navbar-item">
-																																																																																                            <a href="{{ path('home') }}">{% trans %}Учебный материал  {% endtrans %}</a>
-																																																																																                        </li>
-																																																																																                        <li class="uk-navbar-item">
-																																																																																                            <a href="{{ path('home') }}">{% trans %}Контакты{% endtrans %}</a>
-																																																																																                        </li>
-																																																																																                        <li class="uk-navbar-item">
-																																																																																                            <a href="{{ path('home') }}">{% trans %}Доставка{% endtrans %}</a>
-																																																																																                        </li>
-																																																																																                        <li class="uk-navbar-item">
-																																																																																                            <a href="{{ path('home') }}">{% trans %}Корзина{% endtrans %}</a>
-																																																																																                        </li> #}
+											<li class="uk-navbar-item">
+												<a href="{{ path('home') }}">{% trans %}Учебный материал  {% endtrans %}</a>
+											</li>
+											<li class="uk-navbar-item">
+												<a href="{{ path('home') }}">{% trans %}Контакты{% endtrans %}</a>
+											</li>
+											<li class="uk-navbar-item">
+												<a href="{{ path('home') }}">{% trans %}Доставка{% endtrans %}</a>
+											</li>
+											<li class="uk-navbar-item">
+												<a href="{{ path('home') }}">{% trans %}Корзина{% endtrans %}</a>
+											</li> #}
 									</ul>
 								</div>
 							</div>
 						</header>
 					{% endblock %}
+					<body>
 					{% block body %}{% endblock %}
+					</body>
 					{% block footer %}
 						<footer class="uk-section grey-base uk-light uk-padding-large">
 							<div class="uk-container">
@@ -227,10 +226,10 @@
 										<div>Skype: Irinaart</div>
 										<div>Telegram: @Artkozi</div>
 										<div>Tel:
-											<a href="tel:+79518726432" class="number">+79518726432</a>
+											<a href="tel:+79518726432">+79518726432</a>
 										</div>
-										<div class="number">Viber: +79518726432</div>
-										<div class="number">WhatsApp: +79518726432</div>
+										<div>Viber: +79518726432</div>
+										<div>WhatsApp: +79518726432</div>
 										<div>
 											<a href="mailto:kuznetsova-i-v@mail.ru">kuznetsova-i-v@mail.ru</a>
 										</div>

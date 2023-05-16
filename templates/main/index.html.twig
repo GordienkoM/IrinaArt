@@ -5,40 +5,44 @@
 
 {% block body %}
 
-	<section id="gallery-section" class="uk-padding">
+	<section class="uk-padding">
 		<h1 class="uk-text-center">
 			{% trans %}ГАЛЕРЕЯ КАРТИН{% endtrans %}
 		</h1>
-		{# <h2 class="">
-															{% trans %}художник Ирина Козлова - Кузнецова{% endtrans %}
-														</h2> #}
 
 		<!-- SLIDER -->
 
-		<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="autoplay: true; autoplay-interval: 3000">
+		<div class="slider uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="autoplay: true; autoplay-interval: 3000">
 
-			<ul class="uk-margin-bottom uk-slider-items uk-child-width-1-1 uk-child-width-1-8@xl uk-child-width-1-5@l uk-child-width-1-4@m uk-child-width-1-2@s uk-grid uk-margin-top">
+			<div class="uk-slider-container">
+				<ul class="uk-margin-bottom uk-slider-items uk-margin-top">
 
-				{% for painting in paintings %}
-					<li>
-						<!-- Slider image -->
-						<div class="uk-panel painting uk-text-center">
-							<a href="#{{ painting.name}}" uk-toggle>
-								<img src="{{ asset('assets/img/galleryImages/small_' ~ painting.galleryImage) }}" alt="{{ painting.alt}}">
-							</a>
-						</div>
-						<!-- Modal Image with close button -->
-						<div id="{{ painting.name}}" uk-modal>
-							<div class="uk-modal-dialog">
-								<button class="uk-modal-close-outside" type="button" uk-close></button>
-								<img class="modal-image uk-text-center" src="{{ asset('assets/img/paintings/' ~ painting.galleryImage) }}" alt="{{ painting.alt}}">
+					{% for painting in paintings %}
+						<li
+							class="gallery-painting uk-text-center">
+							<!-- Slider image -->
+							<div class="uk-panel painting uk-text-center">
+								<div class="gallery-painting-image">
+									<a href="#{{ painting.name}}" uk-toggle>
+										<img src="{{ asset('assets/img/galleryImages/small_' ~ painting.galleryImage) }}" alt="{{ painting.alt}}">
+									</a>
+								</div>
+								<hr>
 							</div>
-						</div>
-					</li>
-				{% endfor %}
-			</ul>
-			<a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-			<a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+							<!-- Modal Image with close button -->
+							<div id="{{ painting.name}}" uk-modal>
+								<div class="uk-modal-dialog">
+									<button class="uk-modal-close-outside" type="button" uk-close></button>
+									<img class="modal-image uk-text-center" src="{{ asset('assets/img/paintings/' ~ painting.galleryImage) }}" alt="{{ painting.alt}}">
+								</div>
+							</div>
+						</li>
+					{% endfor %}
+				</ul>
+				<a class="uk-position-center-left-out" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+				<a class="uk-position-center-right-out" href="#" uk-slidenav-next uk-slider-item="next"></a>
+			</div>
+			
 		</div>
 		<div class="uk-text-center uk-margin ">
 			<a class="uk-button uk-button-secondary uk-button-large uk-text-center" href="{{ path('paintings') }}">{% trans %}Смотреть галерею{% endtrans %}</a>
@@ -61,7 +65,7 @@
 						<h3>{% trans %}Готовые уроки и курсы{% endtrans %}</h3>
 						<p>{% trans %}Уроки и курсы составлены с учетом академических знаний, знаний старых мастеров и с добавлением личного опыта.{% endtrans %}</p>
 						<p>{% trans %}Научу как нарисовать куб, призму, конус, шар, цилиндр и другие гипсовые фигуры, интерьер, портреты, фигуру человека, гипсовые головы, пейзаж.
-																																																															                     Получите знания по пластической анатомии, воздушной и линейной перспективе,свето-теневой передачи объектов.{% endtrans %}</p>
+																																																																						                     Получите знания по пластической анатомии, воздушной и линейной перспективе,свето-теневой передачи объектов.{% endtrans %}</p>
 						<p>{% trans %}Можете приобрести уроки живописнойи акварелью гуашью акрилом темпирой маслом пастелью цветными карандашами в различных техниках и для разного возроста.{% endtrans %}</p>
 						<p>{% trans %}Рассказываю и показываю все пошагово и понятно. Можно приобрести уроки с обратной связью.{% endtrans %}</p>
 						<a class="uk-button uk-button-secondary uk-button uk-text-center" href="{{ path('home') }}">{% trans %}Подробнее{% endtrans %}</a>
