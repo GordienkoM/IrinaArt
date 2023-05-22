@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\PhotoRepository;
 use App\Repository\PaintingRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -13,15 +14,17 @@ class MainController extends AbstractController
     /**
      * @Route("/", name="home")
      */
-    public function index(PaintingRepository $paintingRepository): Response
+    public function index(PaintingRepository $paintingRepository, PhotoRepository $photoRepository): Response
     {
         $paintings = $paintingRepository->findBy(
             ['enable' => 'true'],
             ['name' => 'ASC']
         );
+        $photos = $photoRepository->findAll();
 
         return $this->render('main/index.html.twig', [
             'paintings'     => $paintings,
+            'photos'     => $photos,
         ]);
     }
 

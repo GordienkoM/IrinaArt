@@ -5,12 +5,12 @@
 
 {% block body %}
 
-	<section class="uk-padding">
+	<section>
 		<h1 class="uk-text-center">
 			{% trans %}ГАЛЕРЕЯ КАРТИН{% endtrans %}
 		</h1>
 
-		<!-- SLIDER -->
+		<!-- PAINTINGS SLIDER -->
 
 		<div class="slider uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="autoplay: true; autoplay-interval: 3000">
 
@@ -114,21 +114,67 @@
 		</div>
 	</section>
 
+	<!-- PHOTOS SLIDER -->
+
+		<div class="slider uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="autoplay: true; autoplay-interval: 3000">
+
+			<div class="uk-slider-container">
+				<ul class="uk-margin-bottom uk-slider-items uk-margin-top">
+
+					{% for photo in photos %}
+						<li
+							class="gallery-painting uk-text-center">
+							<!-- Slider image -->
+							<div class="uk-panel painting uk-text-center">
+								<div class="gallery-painting-image">
+									<a href="#{{'photos' ~ photo.id}}" uk-toggle>
+										<img src="{{ asset('assets/img/photos/' ~ photo.file) }}" alt="{{ photo.description}}">
+									</a>
+								</div>
+								<hr>
+							</div>
+							<!-- Modal Image with close button -->
+							<div id="{{'photos' ~ photo.id}}" uk-modal>
+								<div class="uk-modal-dialog">
+									<button class="uk-modal-close-outside" type="button" uk-close></button>
+									<img class="modal-image uk-text-center" src="{{ asset('assets/img/photos/' ~ photo.file) }}" alt="{{ photo.description}}">
+								</div>
+							</div>
+						</li>
+					{% endfor %}
+				</ul>
+				<a class="uk-position-center-left-out" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+				<a class="uk-position-center-right-out" href="#" uk-slidenav-next uk-slider-item="next"></a>
+			</div>
+			
+		</div>
+		<div class="uk-text-center uk-margin ">
+			<a class="uk-button uk-button-secondary uk-button-large uk-text-center" href="{{ path('paintings') }}">{% trans %}Смотреть галерею{% endtrans %}</a>
+		</div>
+
+	</section>
+
 	<!-- ARTIST SECTION -->
 
 	<section id="artist-section" class="uk-padding-large">
-		<div class="uk-margin" uk-grid>
-			<div class="uk-text-center uk-width-1-3@m"><img width="350px" src="{{ asset('assets/img/artist.jpg') }}" alt="Artist"></div>
-			<!-- <div id="artist-quote" class="uk-width-expand@m uk-margin-remove-left@m uk-margin-large-left"> -->
+		<h2 >{% trans %}О ХУДОЖНИКЕ{% endtrans %}</h2>
+		<div  uk-grid>
+			<div class="uk-text-center uk-width-1-3@m uk-margin-right"><img class="image-bord" src="{{ asset('assets/img/artist.jpg') }}" alt="Artist"></div>
 			<div class="uk-width-expand@m">
-				<h2 class="uk-text-center">{% trans %}О художнике{% endtrans %}</h2>
-				<p class="catch-phrase">{% trans %}Ирина Козлова-Кузнецова - действующий художник - живописец, преподаватель рисования.{% endtrans %}</p>
-				<p class="catch-phrase">{% trans %}Активный участник множества областных, городских и региональных выставок.{% endtrans %}</p>
-				<p class="uk-text-center">{% trans %}«Очень люблю писать природу и ездить на пленэры. Стараюсь передать ощущение и восхищение божественного мироздания. Пропускаю все через себя и выплескиваю на холст. Так же люблю писать натюрморты и портреты. Красота цветов завораживает.{% endtrans %}
-				</p>
-				<p class="uk-text-center">{% trans %}Очень хочется, чтобы зритель почувствовал энергию красоты через картины!»{% endtrans %}
-				</p>
+				<div class="artist-name">{% trans %}Ирина Козлова-Кузнецова - {% endtrans %}</div>
+				<p >{% trans %}Работает в живописных направлениях реализм и импрессионизм.{% endtrans %}</p>
+				<p >{% trans %}Основной материал — холст, масло.{% endtrans %}</p>
+				<p >{% trans %}Активный участник множества областных, городских и региональных выставок.{% endtrans %}</p>
+				<p >{% trans %}«Пишу в позитивном настроении, стараюсь впитать красоту природы и отразить это на картине».{% endtrans %}</p>
+				<p >{% trans %}Ключевая тема картин — изображение жизни, как она есть, через свободное импрессионистическое-реалистичное видение различных состояний природы, натюрмортов и портретов.{% endtrans %}</p>			
 			</div>
+			<div>
+			<p >{% trans %}Российские деревни, улочки родного города, контраст утра и ночи, знойного дня и дождливого вечера, будней и выходных, достопримечательностей и заброшенных мест города дают возможность расширить горизонты восприятия и показать, как энергетика города и деревни, лесов и полей заряжает добром и любовью.{% endtrans %}</p>
+				<p >{% trans %}Автор убеждена, что живопись природы способна воодушевить зрителя, обратить его внимание на красоту окружающего мира и вдохновить на творческие свершения. {% endtrans %}</p>
+				<p >{% trans %}Цвет и манера письма — понятия неразделимые, они для художницы являлся воплощением чувств, в нём проявляется яркий темперамент ее личности.{% endtrans %}</p>
+				<p >{% trans %}Ее живопись пронизана эстетикой импрессионизма, чувственна и эмоциональна.{% endtrans %}</p>
+			</div>
+
 		</div>
 
 	</section>

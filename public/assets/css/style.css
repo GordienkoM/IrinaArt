@@ -15,7 +15,7 @@
 
 html {
 	background: url('../img/Palitra.png') no-repeat top left;
-	background-position: 30px 100px;
+	background-position: 20px 70px;
 }
 
 body {
@@ -90,11 +90,6 @@ ul {
 	margin-bottom: 1.8em;
 }
 
-.grey-container {
-	background-color: var(--ligth-grey);
-	padding: 2.5em;
-	min-height: 70vh;
-}
 
 .star {
 	color: var(--red);
@@ -107,20 +102,23 @@ ul {
 #preheader {
 	background-color: var(--grey-base);
 	font-family: 'Open Sans Light', sans-serif;
-	height: 66px;
+	height: 50px;
 }
 
 #preheader li,
 address {
-	margin-top: 12px;
+	margin-top: 10px;
 	margin-left: 15px;
 }
 
-#preheader li img,
-.icone img {
-	height: 40px;
+#preheader li img {
+	height: 26px;
 }
 
+
+.icone img {
+	height: 24px;
+}
 address a,
 #locales a {
 	color: var(--white);
@@ -130,6 +128,10 @@ address a,
 	min-height: 20px;
 }
 
+
+#email_telephone {
+	margin-top: 6px;
+}
 
 #email_telephone address #locales {
 	margin-right: 20px;
@@ -144,9 +146,6 @@ address a,
 /* HEADER             
 /*-------------------------*/
 
-/* nav {
-	background: url('../img/Palitra.png') no-repeat top left
-} */
 
 address a:hover {
 	color: var(--dark-grey);
@@ -177,7 +176,7 @@ address a:hover {
 
 	font-family: 'AGLettericaCondensedLight', sans-serif;
 	font-size: 19px;
-	color: var(--black-text);
+	color: var(--dark-grey);
 }
 
 /*-------------------------*/
@@ -192,12 +191,9 @@ address a:hover {
 }
 
 
-
 .uk-light .uk-slidenav {
 	color: #222;
 }
-
-
 
 
 .gallery-painting {
@@ -257,15 +253,28 @@ address a:hover {
 
 #artist-section {
 	background-color: var(--white);
+	color: var(--black-text);
+	font-family: 'Arial Narrow', sans-serif;
+	font-size: 25px;
 }
 
 #artist-section p {
 	margin-block-start: 0.5em;
 	margin-block-end: 0.5em;
-	font-style: italic;
-	font-size: 20px;
 
 }
+
+.image-bord {	
+	border-right: 2px solid var(--dark-grey);
+	border-bottom: 2px solid var(--dark-grey);
+	padding-right: 40px;
+	padding-bottom: 40px;
+}
+
+.artist-name{
+	font-size: 30px;
+}
+
 
 /*-------------------------*/
 /* FOOTER           
@@ -277,7 +286,6 @@ footer {
 }
 
 
-
 footer div {
 
 	color: var(--white);
@@ -287,79 +295,6 @@ footer div {
 	max-width: 150px
 }
 
-/*-------------------------*/
-/* HART         
-/*-------------------------*/
-
-@keyframes heartbeat {
-	0% {
-		transform: scale(.75);
-	}
-
-	20% {
-		transform: scale(1);
-	}
-
-	40% {
-		transform: scale(.75);
-	}
-
-	60% {
-		transform: scale(1);
-	}
-
-	80% {
-		transform: scale(.75);
-	}
-
-	100% {
-		transform: scale(.75);
-	}
-}
-
-#heart {
-	position: relative;
-	width: 40px;
-	height: 36px;
-	animation: heartbeat 1s infinite;
-}
-
-#heart:before,
-#heart:after {
-	position: absolute;
-	content: "";
-	left: 20px;
-	top: 0;
-	width: 20px;
-	height: 36px;
-	background: var(--red);
-	-moz-border-radius: 20px 20px 0 0;
-	border-radius: 20px 20px 0 0;
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	-ms-transform: rotate(-45deg);
-	-o-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-	-webkit-transform-origin: 0 100%;
-	-moz-transform-origin: 0 100%;
-	-ms-transform-origin: 0 100%;
-	-o-transform-origin: 0 100%;
-	transform-origin: 0 100%;
-}
-
-#heart:after {
-	left: 0;
-	-webkit-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	-o-transform: rotate(45deg);
-	transform: rotate(45deg);
-	-webkit-transform-origin: 100% 100%;
-	-moz-transform-origin: 100% 100%;
-	-ms-transform-origin: 100% 100%;
-	-o-transform-origin: 100% 100%;
-	transform-origin: 100% 100%;
-}
 
 /*-------------------------*/
 /* PAINTINGS        
@@ -380,18 +315,16 @@ footer div {
 }
 
 /*-------------------------*/
-/* CONTACT         
+/* ABOUT ARTIST       
 /*-------------------------*/
 
-.contact {
-	padding: 2em;
-	border-top: 1px solid var(--grey);
+#about_artist {
+
+	color: var(--black-text);
+	font-family: 'Arial Narrow', sans-serif;
+	font-size: 25px;	
 }
 
-.contact-container {
-	background-color: var(--ligth-grey);
-	padding: 2em;
-}
 
 
 
