@@ -52,17 +52,16 @@
 
 	<!-- LESSONS SECTION -->
 
-	<section class="uk-padding">
+	<section id="lessons-section" class="uk-padding">
 		<h2>{% trans %}Уроки рисования{% endtrans %}</h2>
-		<p class="catch-phrase"></p>
 		<div class="uk-child-width-1-3@m" uk-grid>
 			<div>
-				<div class="uk-card uk-card-default uk-text-center">
-					<div class="uk-card-media-top">
+				<div>
+					<div class="lessons-section-image">
 						<img src="{{ asset('assets/img/courses_lessons.jpg') }}" alt="Le buste blanc d'un homme  et un dessin de ce buste">
 					</div>
-					<div class="uk-card-body">
-						<h3>{% trans %}Готовые уроки и курсы{% endtrans %}</h3>
+					<div>
+						<h3 class="lessons-section-header">{% trans %}Готовые уроки и курсы{% endtrans %}</h3>
 						<p>{% trans %}Уроки и курсы составлены с учетом академических знаний, знаний старых мастеров и с добавлением личного опыта.{% endtrans %}</p>
 						<p>{% trans %}Научу как нарисовать куб, призму, конус, шар, цилиндр и другие гипсовые фигуры, интерьер, портреты, фигуру человека, гипсовые головы, пейзаж.
 																																																																						                     Получите знания по пластической анатомии, воздушной и линейной перспективе,свето-теневой передачи объектов.{% endtrans %}</p>
@@ -73,12 +72,12 @@
 				</div>
 			</div>
 			<div>
-				<div class="uk-card uk-card-default uk-text-center">
-					<div class="uk-card-media-top">
+				<div>
+					<div class="lessons-section-image">
 						<img src="{{ asset('assets/img/online.jpg') }}" alt="Quatre femmes avec des tableaux dans les main, de l'eau et des bateaux derrière eux">
 					</div>
-					<div class="uk-card-body">
-						<h3>{% trans %}Онлай-занятия инидивидуальные и в мини-группе{% endtrans %}</h3>
+					<div>
+						<h3 class="lessons-section-header">{% trans %}Онлай-занятия инидивидуальные и в мини-группе{% endtrans %}</h3>
 						<p>{% trans %}Занимаюсь дистанционно с 2 камер, вы видите меня и работу одновременно.  Работаю с учениками с нуля, новичками и с опытными{% endtrans %}
 						</p>
 						<p>{% trans %}Пошагово все объясняю и рисую вместе с вами, легко и понятно, показывая и объясняя каждый шаг, как что делать. Поэтому у всех получается, даже если никогда не рисовали.
@@ -93,12 +92,12 @@
 				</div>
 			</div>
 			<div>
-				<div class="uk-card uk-card-default uk-text-center">
-					<div class="uk-card-media-top">
+				<div>
+					<div class="lessons-section-image">
 						<img src="{{ asset('assets/img/material.jpg') }}" alt="Un enfant qui dessine des hérissons">
 					</div>
-					<div class="uk-card-body">
-						<h3>{% trans %}Бесплатные уроки и учебный материял{% endtrans %}</h3>
+					<div>
+						<h3 class="lessons-section-header">{% trans %}Бесплатные уроки и учебный материял{% endtrans %}</h3>
 						<p>{% trans %}Если вам нравиться учиться обучаться дома, то здесь вы можете погрузиться в мир живописи и совершенно бесплатно пройти онлайн-курс "Азы рисования".
 							{% endtrans %}
 						</p>
@@ -115,6 +114,10 @@
 	</section>
 
 	<!-- PHOTOS SLIDER -->
+
+		<h2 class="uk-text-center">
+		{% trans %}События{% endtrans %}
+		</h2>
 
 		<div class="slider uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="autoplay: true; autoplay-interval: 3000">
 
@@ -149,14 +152,14 @@
 			
 		</div>
 		<div class="uk-text-center uk-margin ">
-			<a class="uk-button uk-button-secondary uk-button-large uk-text-center" href="{{ path('paintings') }}">{% trans %}Смотреть галерею{% endtrans %}</a>
+			<a class="uk-button uk-button-secondary uk-button-large uk-text-center" href="{{ path('events') }}">{% trans %}Подробнее{% endtrans %}</a>
 		</div>
 
 	</section>
 
 	<!-- ARTIST SECTION -->
 
-	<section id="artist-section" class="uk-padding-large">
+	<section id="artist-section" >
 		<h2 >{% trans %}О ХУДОЖНИКЕ{% endtrans %}</h2>
 		<div  uk-grid>
 			<div class="uk-text-center uk-width-1-3@m uk-margin-right"><img class="image-bord" src="{{ asset('assets/img/artist.jpg') }}" alt="Artist"></div>
@@ -169,12 +172,15 @@
 				<p >{% trans %}Ключевая тема картин — изображение жизни, как она есть, через свободное импрессионистическое-реалистичное видение различных состояний природы, натюрмортов и портретов.{% endtrans %}</p>			
 			</div>
 			<div>
-			<p >{% trans %}Российские деревни, улочки родного города, контраст утра и ночи, знойного дня и дождливого вечера, будней и выходных, достопримечательностей и заброшенных мест города дают возможность расширить горизонты восприятия и показать, как энергетика города и деревни, лесов и полей заряжает добром и любовью.{% endtrans %}</p>
+				<p >{% trans %}Российские деревни, улочки родного города, контраст утра и ночи, знойного дня и дождливого вечера, будней и выходных, достопримечательностей и заброшенных мест города дают возможность расширить горизонты восприятия и показать, как энергетика города и деревни, лесов и полей заряжает добром и любовью.{% endtrans %}</p>
 				<p >{% trans %}Автор убеждена, что живопись природы способна воодушевить зрителя, обратить его внимание на красоту окружающего мира и вдохновить на творческие свершения. {% endtrans %}</p>
 				<p >{% trans %}Цвет и манера письма — понятия неразделимые, они для художницы являлся воплощением чувств, в нём проявляется яркий темперамент ее личности.{% endtrans %}</p>
 				<p >{% trans %}Ее живопись пронизана эстетикой импрессионизма, чувственна и эмоциональна.{% endtrans %}</p>
 			</div>
 
+		</div>
+		<div class="uk-text-center uk-margin ">
+			<a class="uk-button uk-button-secondary uk-button-large uk-text-center" href="{{ path('about_artist') }}">{% trans %}Подробнее{% endtrans %}</a>
 		</div>
 
 	</section>

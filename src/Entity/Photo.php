@@ -27,6 +27,11 @@ class Photo
      */
     private $description;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Event::class, inversedBy="photos")
+     */
+    private $event;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -52,6 +57,18 @@ class Photo
     public function setDescription(?string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getEvent(): ?Event
+    {
+        return $this->event;
+    }
+
+    public function setEvent(?Event $event): self
+    {
+        $this->event = $event;
 
         return $this;
     }

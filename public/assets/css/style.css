@@ -22,7 +22,7 @@ body {
 
 	font-size: 19px;
 
-	font-family: 'AGLettericaCondensedLight', sans-serif;
+	font-family: 'Arial Narrow', sans-serif;
 	/* background-color: var(--white); */
 
 	/* background: url('../img/Palitra.png') no-repeat top left; */
@@ -57,6 +57,7 @@ h3 {
 	text-align: center;
 	font-family: 'Open Sans Light', sans-serif;
 	color: var(--grey-base);
+
 }
 
 h1,
@@ -83,14 +84,6 @@ ul {
 	list-style: none;
 }
 
-.catch-phrase {
-	font-size: 22px;
-	color: var(--dark-grey);
-	text-align: center;
-	margin-bottom: 1.8em;
-}
-
-
 .star {
 	color: var(--red);
 }
@@ -100,8 +93,9 @@ ul {
 /*-------------------------*/
 
 #preheader {
+	color: var(--white);
 	background-color: var(--grey-base);
-	font-family: 'Open Sans Light', sans-serif;
+	font-family: 'Open Sans SemiBold', sans-serif;
 	height: 50px;
 }
 
@@ -119,8 +113,10 @@ address {
 .icone img {
 	height: 24px;
 }
-address a,
-#locales a {
+
+#locales a{
+	font-family: 'Open Sans SemiBold', sans-serif;
+	font-size: 19px;
 	color: var(--white);
 }
 
@@ -148,13 +144,14 @@ address a,
 
 
 address a:hover {
-	color: var(--dark-grey);
+	color: var(--black-text);
 	text-decoration: none;
 }
 
 
 .logo-phrase {
-
+	color: var(--black-text);
+	text-transform: none;
 	padding-top: 40px;
 	padding-bottom: 40px;
 	padding-left: 30px;
@@ -172,7 +169,7 @@ address a:hover {
 }
 
 
-.uk-navbar-nav li a {
+#menu .uk-navbar-nav li a {
 
 	font-family: 'AGLettericaCondensedLight', sans-serif;
 	font-size: 19px;
@@ -248,14 +245,33 @@ address a:hover {
 }
 
 /*-------------------------*/
+/* LESSONS SECTION         
+/*-------------------------*/
+
+#lessons-section {
+	padding-right: 100px;
+	padding-left: 100px;
+}
+
+.lessons-section-header{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	text-align: center;
+}
+
+
+/*-------------------------*/
 /* ARTIST SECTION         
 /*-------------------------*/
 
 #artist-section {
 	background-color: var(--white);
 	color: var(--black-text);
-	font-family: 'Arial Narrow', sans-serif;
 	font-size: 25px;
+	padding-right: 100px;
+	padding-left: 100px;
+	padding-top: 50px;
+	padding-bottom: 10px;
 }
 
 #artist-section p {
@@ -281,10 +297,12 @@ address a:hover {
 /*-------------------------*/
 
 footer {
-
-	font-family: 'Open Sans Light', sans-serif;
+	font-family: 'Open Sans SemiBold', sans-serif;
 }
 
+.footer-header{
+	font-family: 'Open Sans SemiBold', sans-serif;
+}
 
 footer div {
 
@@ -301,7 +319,7 @@ footer div {
 /*-------------------------*/
 
 .painting-titre {
-	/* font-family: 'Alegreya SC', serif; */
+
 	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
 	text-align: center;
@@ -327,7 +345,6 @@ footer div {
 
 
 
-
 /*-------------------------*/
 /* Media queries       
 /*-------------------------*/
@@ -337,6 +354,16 @@ footer div {
 
 	body {
 		max-width: 100%;
+	}
+
+	#gallery {
+		padding-right: 50px;
+		padding-left: 50px;
+	}
+
+	#lessons-section {
+		padding-right: 50px;
+		padding-left: 50px;
 	}
 
 	#artist-quote {
@@ -362,6 +389,17 @@ footer div {
 }
 
 @media screen and (max-width : 480px) {
+
+	#gallery {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+
+	#lessons-section {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+
 
 	#email_telephone {
 		padding-left: 1em;
@@ -408,7 +446,8 @@ footer div {
 /*-------------------------*/
 
 #gallery {
-	background-color: var(--grey) !important;
+	padding-right: 100px;
+	padding-left: 100px;
 }
 
 #image-viewer {

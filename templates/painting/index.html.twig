@@ -6,8 +6,7 @@
 
 {% block body %}
 
-	<div
-		id="gallery" class="uk-padding">
+	<div id="gallery">
 		{# Filter Uikit #}
 		<div uk-filter="target: .js-filter">
 			<ul class="uk-subnav uk-subnav-pill uk-flex uk-flex-center ">
@@ -26,7 +25,6 @@
 					</li>
 				{% endfor %}
 			</ul>
-			<p class="uk-text-large uk-text-center">{% trans %}Вы можите купить картину{% endtrans %}</p>
 			<ul class="js-filter uk-child-width-1-2 uk-child-width-1-4@m uk-text-center" uk-grid>
 				{% for painting in paintings %}
 					{% for category in painting.categories %}
