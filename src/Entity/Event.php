@@ -34,6 +34,21 @@ class Event
      */
     private $photos;
 
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $nameEn;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $place;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $placeEn;
+
     public function __construct()
     {
         $this->photos = new ArrayCollection();
@@ -94,6 +109,42 @@ class Event
                 $photo->setEvent(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getNameEn(): ?string
+    {
+        return $this->nameEn;
+    }
+
+    public function setNameEn(?string $nameEn): self
+    {
+        $this->nameEn = $nameEn;
+
+        return $this;
+    }
+
+    public function getPlace(): ?string
+    {
+        return $this->place;
+    }
+
+    public function setPlace(?string $place): self
+    {
+        $this->place = $place;
+
+        return $this;
+    }
+
+    public function getPlaceEn(): ?string
+    {
+        return $this->placeEn;
+    }
+
+    public function setPlaceEn(?string $placeEn): self
+    {
+        $this->placeEn = $placeEn;
 
         return $this;
     }

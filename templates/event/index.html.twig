@@ -1,20 +1,46 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello EventController!{% endblock %}
+{% block title %}
+	{% trans %}Галерея{% endtrans %}
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+	<div id="events">
+		<h1 class="uk-text-center">
+			{% trans %}События{% endtrans %}
+		</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/laragon/www/IrinaArt/src/Controller/EventController.php'|file_link(0) }}">src/Controller/EventController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/laragon/www/IrinaArt/templates/event/index.html.twig'|file_link(0) }}">templates/event/index.html.twig</a></code></li>
-    </ul>
-</div>
+		<div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center" uk-grid>
+			{% for event in events %}
+				<div>
+					<div class="uk-card">
+						<div class="uk-card-media-top">
+							<img src="{{ asset('assets/img/events/' ~ event.image) }}" alt="">
+						</div>
+						<div class="uk-card-body">
+							<div class="event-place">
+								{% if (app.request.locale == 'en') and (event.nameEn is not empty)  %}
+									{{event.nameEn}}
+								{% else %}
+									{{event.name}}
+								{% endif %}
+							</div>
+							<div class="event-place">
+								{% if (app.request.locale == 'en') and (event.placeEn is not empty)  %}
+									{{event.placeEn}}
+								{% elseif (event.place is not empty) %}
+									{{event.place}}
+								{% endif %}
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+
+	</div>
+
 {% endblock %}
