@@ -23,14 +23,14 @@
 							<!-- Slider image -->
 							<div class="uk-panel painting uk-text-center">
 								<div class="gallery-painting-image">
-									<a href="#{{ painting.name}}" uk-toggle>
+									<a href="#gallery_{{painting.id}}" uk-toggle>
 										<img src="{{ asset('assets/img/galleryImages/small_' ~ painting.galleryImage) }}" alt="{{ painting.alt}}">
 									</a>
 								</div>
 								<hr>
 							</div>
 							<!-- Modal Image with close button -->
-							<div id="{{ painting.name}}" uk-modal>
+							<div id="gallery_{{painting.id}}" uk-modal>
 								<div class="uk-modal-dialog">
 									<button class="uk-modal-close-outside" type="button" uk-close></button>
 									<img class="modal-image uk-text-center" src="{{ asset('assets/img/paintings/' ~ painting.galleryImage) }}" alt="{{ painting.alt}}">
@@ -130,14 +130,14 @@
 							<!-- Slider image -->
 							<div class="uk-panel painting uk-text-center">
 								<div class="gallery-painting-image">
-									<a href="#{{'photos' ~ photo.id}}" uk-toggle>
+									<a href="#main_photos{{ photo.id}}" uk-toggle>
 										<img src="{{ asset('assets/img/photos/' ~ photo.file) }}" alt="{{ photo.description}}">
 									</a>
 								</div>
 								<hr>
 							</div>
 							<!-- Modal Image with close button -->
-							<div id="{{'photos' ~ photo.id}}" uk-modal>
+							<div id="main_photos{{ photo.id}}" uk-modal>
 								<div class="uk-modal-dialog">
 									<button class="uk-modal-close-outside" type="button" uk-close></button>
 									<img class="modal-image uk-text-center" src="{{ asset('assets/img/photos/' ~ photo.file) }}" alt="{{ photo.description}}">

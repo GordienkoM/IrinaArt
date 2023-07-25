@@ -15,7 +15,16 @@
 				<div>
 					<div class="uk-card">
 						<div class="uk-card-media-top  uk-flex uk-flex-center uk-flex-middle">
-							<img class="photo-image" src="{{ asset('assets/img/photos/' ~ photo.file) }}" alt="">
+							<a href="#all_photo{{ photo.id}}" uk-toggle>
+								<img class="photo-image" src="{{ asset('assets/img/photos/' ~ photo.file) }}" alt="">
+							</a>
+							<!-- Modal Image with close button -->
+							<div id="all_photo{{ photo.id}}" uk-modal>
+								<div class="uk-modal-dialog">
+									<button class="uk-modal-close-outside" type="button" uk-close></button>
+									<img class="uk-text-center" src="{{ asset('assets/img/photos/' ~ photo.file) }}" alt="">
+								</div>
+							</div>
 						</div>
 						<div class="event-legend">
 							<span >
