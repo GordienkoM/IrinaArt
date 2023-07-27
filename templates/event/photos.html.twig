@@ -36,6 +36,21 @@
 					</div>
 				</div>
 			{% endfor %}
+			<div class="uk-card">
+				<video controls="controls">
+					<source src="{{ asset('assets/img/videos/video1.mp4') }}">
+				</video>
+			</div>
+
+			<div class="uk-card">
+				<iframe  src="https://www.youtube.com/embed/dt8SyNecPVk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+				</iframe>
+			</div>
+			<div class="uk-card">
+				<video src="{{ asset('assets/img/videos/video2.mp4') }}" width="" height="" uk-video="automute: true></video>
+			</div>
+
+
 		</div>
 
 	</div>
