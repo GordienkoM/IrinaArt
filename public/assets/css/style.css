@@ -287,8 +287,8 @@ address a:hover {
 .image-bord {	
 	border-right: 2px solid var(--dark-grey);
 	border-bottom: 2px solid var(--dark-grey);
-	padding-right: 40px;
-	padding-bottom: 40px;
+	padding-right: 20px;
+	padding-bottom: 20px;
 }
 
 .artist-name{
@@ -303,10 +303,13 @@ address a:hover {
 footer {
 	margin-top: 50px;
 	font-family: 'Open Sans SemiBold', sans-serif;
+
 }
 
 .footer-header{
 	font-family: 'Open Sans SemiBold', sans-serif;
+	color: var(--white);
+	font-size: 26px;
 }
 
 footer div {
@@ -403,6 +406,9 @@ footer div {
 	color: var(--black-text);
 	font-family: 'Arial Narrow', sans-serif;
 	font-size: 25px;	
+}
+#artist_image{
+	width: 450px ;
 }
 
 
