@@ -2,11 +2,13 @@
 
 namespace App\Controller\Admin;
 
-use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
-use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
-use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
+use App\Entity\Category;
+use App\Entity\Painting;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
+use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
 
 class DashboardController extends AbstractDashboardController
 {
@@ -35,12 +37,14 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('IrinaArt');
+            ->setTitle('Администрация');
     }
 
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToDashboard('Панель управления', 'fa fa-home');
-        // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
+        yield MenuItem::linkToCrud('Категории', 'fa fa-list-alt', Category::class);
+        yield MenuItem::linkToCrud('Картины', 'fas fa-envelope', Painting::class);
+
     }
 }
