@@ -106,10 +106,10 @@
 
 						{# LOGO + NAVIGATION #}
 
-						<nav id="menu" class="uk-navbar">
+						<nav class="uk-navbar menu">
 							<div class="uk-navbar-left">
 								<ul class="uk-navbar-nav">
-									<li class="uk-active">
+									<li>
 										<a class="uk-navbar-item uk-logo" href="{{ path('home') }}">
 											<div class="logo-phrase">
 												<div class="logo-phrase-top">
@@ -123,26 +123,32 @@
 							</div>
 							<div class="uk-navbar-right">
 								<ul class="uk-navbar-nav uk-visible@s">
-									<li class="uk-navbar-item">
-										<a href="{{ path('home') }}">{% trans %}Главная{% endtrans %}</a>
+									<li class="uk-navbar-item page-active">
+										<a {% block mainActive %}{% endblock %} 
+										href="{{ path('home') }}">{% trans %}Главная{% endtrans %}</a>
 									</li>
 									<li class="uk-navbar-item">
-										<a href="{{ path('paintings') }}">{% trans %}Галерея
+										<a {% block galleryActive %}{% endblock %}
+										href="{{ path('paintings') }}">{% trans %}Галерея
 											{% endtrans %}</a>
 									</li>
 									<li class="uk-navbar-item">
-										<a href="{{ path('home') }}">{% trans %}Уроки рисования{% endtrans %}</a>
+										<a {% block lessonsActive %}{% endblock %}  
+										href="{{ path('home') }}">{% trans %}Уроки рисования{% endtrans %}</a>
 									</li>
 									<li class="uk-navbar-item">
-										<a href="{{ path('about_artist') }}">{% trans %}О художнике
+										<a {% block artistActive %}{% endblock %}
+										href="{{ path('about_artist') }}">{% trans %}О художнике
 											{% endtrans %}</a>
 									</li>
 
 									<li class="uk-navbar-item">
-										<a href="{{ path('events') }}">{% trans %}События{% endtrans %}</a>
+										<a {% block eventActive %}{% endblock %}
+										href="{{ path('events') }}">{% trans %}События{% endtrans %}</a>
 									</li>
 									<li class="uk-navbar-item">
-										<a href="{{ path('home') }}">{% trans %}Контакты{% endtrans %}</a>
+										<a {% block contactActive %}{% endblock %}
+										href="{{ path('home') }}">{% trans %}Контакты{% endtrans %}</a>
 									</li>
 								</ul>
 								<a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>

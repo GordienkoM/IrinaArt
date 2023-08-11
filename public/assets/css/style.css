@@ -169,11 +169,16 @@ address a:hover {
 }
 
 
-#menu .uk-navbar-nav li a {
+.menu .uk-navbar-nav li a {
 
 	font-family: 'AGLettericaCondensedLight', sans-serif;
 	font-size: 19px;
 	color: var(--dark-grey);
+}
+
+  #page-active{
+
+	color: var(--black-text);
 }
 
 /*-------------------------*/
