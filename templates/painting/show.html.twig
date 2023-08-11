@@ -6,64 +6,56 @@
 
 {% block body %}
 
-	<div id="first-part-painting" class="uk-flex uk-flex-center grey">
-		<div id="image-viewer" class="uk-padding">
-
+	<div   class="uk-child-width-expand@s " uk-grid>
+		<div id="image-viewer">
 			<ul id="main-image" class="uk-switcher">
 				{% for image in painting.images %}
 					<li class="painting-show"><img src="{{ asset('assets/img/paintings/' ~ image.file) }}" alt="{{ painting.name}}"></li>
 				{% endfor %}
 			</ul>
-			<ul id="viewer-switcher" class="uk-subnav uk-subnav-pill" uk-switcher="connect: #main-image">
-				{% for image in painting.images %}
-					<li class="painting-show-small">
-						<a href="#"><img src="{{ asset('assets/img/paintings/' ~ image.file) }}" alt="{{ painting.name}}"></a>
-					</li>
-				{% endfor %}
-			</ul>
-
 		</div>
-		<div class="uk-padding">
+		<div class="">
 			<div>
 				<h1 class="">{{painting.name}}</h1>
-				<div>{% trans %}Художник Ирина Козлова - Кузнецова{% endtrans %}</div>
-				{# <table class="uk-table">
-																																	<tr>
-																																		<td>{% trans %}Оригинал картины{% endtrans %}</td>
-																																		<td>{{ painting.priceOriginal }}
-																																			{% trans %}рублей{% endtrans %}</td>
-																																		<td>
-																																			<a class="uk-button uk-button-secondary uk-button-small" href="{{ path('cart_painting_add', {'id': painting.id,'type': 'Original'}) }}">{% trans %}Добавить в корзину{% endtrans %}</a>
-																																		</td>
-																																	</tr>
-																																	<tr>
-																																		<td>{% trans %}Печать картины{% endtrans %}</td>
-																																		<td>{{ painting.pricePrint }}
-																																			{% trans %}рублей{% endtrans %}</td>
-																																		<td>
-																																			<a class="uk-button uk-button-secondary uk-button-small" href="{{ path('cart_painting_add', {'id': painting.id,'type': 'Reproduction'}) }}">{% trans %}Добавить в корзину{% endtrans %}</a>
-																																		</td>
-																																	</tr>
-																																</table> #}
+				{#<div>{% trans %}Художник Ирина Козлова - Кузнецова{% endtrans %}</div>
+				 <table class="uk-table">
+					<tr>
+						<td>{% trans %}Оригинал картины{% endtrans %}</td>
+						<td>{{ painting.priceOriginal }}
+							{% trans %}рублей{% endtrans %}</td>
+						<td>
+							<a class="uk-button uk-button-secondary uk-button-small" href="{{ path('cart_painting_add', {'id': painting.id,'type': 'Original'}) }}">{% trans %}Добавить в корзину{% endtrans %}</a>
+						</td>
+					</tr>
+					<tr>
+						<td>{% trans %}Печать картины{% endtrans %}</td>
+						<td>{{ painting.pricePrint }}
+							{% trans %}рублей{% endtrans %}</td>
+						<td>
+							<a class="uk-button uk-button-secondary uk-button-small" href="{{ path('cart_painting_add', {'id': painting.id,'type': 'Reproduction'}) }}">{% trans %}Добавить в корзину{% endtrans %}</a>
+						</td>
+					</tr>
+				</table> #}
 
 				{# <p>{% trans %}Доставка по России бесплатна{% endtrans %}<br>
-													{% trans %}Доставка по миру обговаривается отдельно{% endtrans %}
-												</p> #}
+					{% trans %}Доставка по миру обговаривается отдельно{% endtrans %}
+				</p> #}
 				<div>
 					<p class="uk-margin-top">
 						{% trans %}Артикл{% endtrans %}:
-						{{painting.id}}
+						{{painting.number}}
 					</p>
-					<p class="number">
+					<p class="">
 						{% trans  %}Размер{% endtrans %}:
 						{{ painting.hight}}
 						X
 						{{ painting.width }}
 						{% trans %}см{% endtrans %}
-						<br>
+					</p>
+					<p class="">
 						{% trans %}Материал{% endtrans %}:
 						{{ painting.material }}
-						<br>
+						
 						{% trans %}Год создания{% endtrans %}:
 						{{ painting.creationYear }}
 					</p>
@@ -73,11 +65,18 @@
 					{% trans %}рублей{% endtrans %}
 				</p>
 			</div>
+			<div>
+				<ul id="viewer-switcher" class="uk-subnav uk-subnav-pill" uk-switcher="connect: #main-image">
+					{% for image in painting.images %}
+						<li class="painting-show-small">
+							<a href="#"><img src="{{ asset('assets/img/paintings/' ~ image.file) }}" alt="{{ painting.name}}"></a>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
 		</div>
 	</div>
-	<p class="uk-text-italic uk-text-large uk-text-center uk-margin-large">
+	<p class="uk-text-italic uk-text-large uk-text-center uk-padding">
 		{{painting.discription}}</p>
-	{# <hr>
-								<p class="uk-padding">{% trans %}Вы можеите купить картины Ирины Козловой Кузнецовой{% endtrans %}</p> #}
 
 {% endblock %}
