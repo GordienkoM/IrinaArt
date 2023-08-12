@@ -1,7 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-	{{ event.name }}
+	{% if (app.request.locale == 'en') and (event.nameEn is not empty)  %}
+		{{event.nameEn}}
+	{% else %}
+		{{event.name}}
+	{% endif %}
 {% endblock %}
 
 {% block eventActive %}id="page-active"{% endblock %}
