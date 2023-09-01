@@ -88,104 +88,104 @@
 						</div>
 
 						<div id="locales" class="uk-navbar-right uk-margin-bottom">
-							{% for locale in locales %}
-								<ul class="uk-navbar-nav">
-									{% if locale != app.request.locale %}
-										<li class="uk-active">
-										{% else %}
-											<li>
-											{% endif %}
-											{# <li> #}
-											<a href="{{ path('change_locale', {'locale': locale}) }}">{{ locale }}</a>
-										</li>
-									</ul>
-								{% endfor %}
-							</div>
-
+						{% for locale in locales %}
+							<ul class="uk-navbar-nav">
+								{% if locale != app.request.locale %}
+									<li class="uk-active">
+									{% else %}
+										<li>
+										{% endif %}
+										{# <li> #}
+										<a href="{{ path('change_locale', {'locale': locale}) }}">{{ locale }}</a>
+									</li>
+								</ul>
+							{% endfor %}
 						</div>
 
-						{# LOGO + NAVIGATION #}
+					</div>
 
-						<nav class="uk-navbar menu">
-							<div class="uk-navbar-left">
-								<ul class="uk-navbar-nav">
-									<li>
-										<a class="uk-navbar-item uk-logo" href="{{ path('home') }}">
-											<div class="logo-phrase">
-												<div class="logo-phrase-top">
-													Ирина Козлова - Кузнецова</div>
-												<div class="logo-phrase-bottom uk-align-right">
-													художник-живописец</div>
-											</div>
-										</a>
-									</li>
-								</ul>
-							</div>
-							<div class="uk-navbar-right">
+					{# LOGO + NAVIGATION #}
+
+					<nav class="uk-navbar menu">
+						<div class="uk-navbar-left">
+							<ul class="uk-navbar-nav">
+								<li>
+									<a class="uk-navbar-item uk-logo" href="{{ path('home') }}">
+										<div class="logo-phrase">
+											<div class="logo-phrase-top">
+												Ирина Козлова - Кузнецова</div>
+											<div class="logo-phrase-bottom uk-align-right">
+												художник-живописец</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="uk-navbar-right">
+							<ul class="uk-navbar-nav uk-visible@s">
+								<li class="uk-navbar-item page-active">
+									<a {% block mainActive %}{% endblock %} 
+									href="{{ path('home') }}">{% trans %}Главная{% endtrans %}</a>
+								</li>
+								<li class="uk-navbar-item">
+									<a {% block galleryActive %}{% endblock %}
+									href="{{ path('paintings') }}">{% trans %}Галерея
+										{% endtrans %}</a>
+								</li>
+								<li class="uk-navbar-item">
+									<a {% block lessonsActive %}{% endblock %}  
+									href="{{ path('home') }}">{% trans %}Уроки рисования{% endtrans %}</a>
+								</li>
+								<li class="uk-navbar-item">
+									<a {% block artistActive %}{% endblock %}
+									href="{{ path('about_artist') }}">{% trans %}О художнике
+										{% endtrans %}</a>
+								</li>
+
+								<li class="uk-navbar-item">
+									<a {% block eventActive %}{% endblock %}
+									href="{{ path('events') }}">{% trans %}События{% endtrans %}</a>
+								</li>
+								<li class="uk-navbar-item">
+									<a {% block contactActive %}{% endblock %}
+									href="{{ path('home') }}">{% trans %}Контакты{% endtrans %}</a>
+								</li>
+							</ul>
+							<a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+						</div>
+					</nav>
+					<div id="sidenav" uk-offcanvas="flip: true" class="uk-offcanvas">
+						<div class="uk-offcanvas-bar">
+							<ul class="uk-nav">
 								<ul class="uk-navbar-nav uk-visible@s">
-									<li class="uk-navbar-item page-active">
-										<a {% block mainActive %}{% endblock %} 
-										href="{{ path('home') }}">{% trans %}Главная{% endtrans %}</a>
+									<li class="uk-navbar-item">
+										<a href="{{ path('home') }}">{% trans %}Главная{% endtrans %}</a>
 									</li>
 									<li class="uk-navbar-item">
-										<a {% block galleryActive %}{% endblock %}
-										href="{{ path('paintings') }}">{% trans %}Галерея
+										<a href="{{ path('home') }}">{% trans %}Галерея
 											{% endtrans %}</a>
 									</li>
 									<li class="uk-navbar-item">
-										<a {% block lessonsActive %}{% endblock %}  
-										href="{{ path('home') }}">{% trans %}Уроки рисования{% endtrans %}</a>
-									</li>
-									<li class="uk-navbar-item">
-										<a {% block artistActive %}{% endblock %}
-										href="{{ path('about_artist') }}">{% trans %}О художнике
+										<a href="{{ path('home') }}">{% trans %}О художнике
 											{% endtrans %}</a>
 									</li>
-
-									<li class="uk-navbar-item">
-										<a {% block eventActive %}{% endblock %}
-										href="{{ path('events') }}">{% trans %}События{% endtrans %}</a>
-									</li>
-									<li class="uk-navbar-item">
-										<a {% block contactActive %}{% endblock %}
-										href="{{ path('home') }}">{% trans %}Контакты{% endtrans %}</a>
-									</li>
+									{# 
+										<li class="uk-navbar-item">
+											<a href="{{ path('home') }}">{% trans %}Учебный материал  {% endtrans %}</a>
+										</li>
+										<li class="uk-navbar-item">
+											<a href="{{ path('home') }}">{% trans %}Контакты{% endtrans %}</a>
+										</li>
+										<li class="uk-navbar-item">
+											<a href="{{ path('home') }}">{% trans %}Доставка{% endtrans %}</a>
+										</li>
+										<li class="uk-navbar-item">
+											<a href="{{ path('home') }}">{% trans %}Корзина{% endtrans %}</a>
+										</li> #}
 								</ul>
-								<a href="#" class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
 							</div>
-						</nav>
-						<div id="sidenav" uk-offcanvas="flip: true" class="uk-offcanvas">
-							<div class="uk-offcanvas-bar">
-								<ul class="uk-nav">
-									<ul class="uk-navbar-nav uk-visible@s">
-										<li class="uk-navbar-item">
-											<a href="{{ path('home') }}">{% trans %}Главная{% endtrans %}</a>
-										</li>
-										<li class="uk-navbar-item">
-											<a href="{{ path('home') }}">{% trans %}Галерея
-												{% endtrans %}</a>
-										</li>
-										<li class="uk-navbar-item">
-											<a href="{{ path('home') }}">{% trans %}О художнике
-												{% endtrans %}</a>
-										</li>
-										{# 
-											<li class="uk-navbar-item">
-												<a href="{{ path('home') }}">{% trans %}Учебный материал  {% endtrans %}</a>
-											</li>
-											<li class="uk-navbar-item">
-												<a href="{{ path('home') }}">{% trans %}Контакты{% endtrans %}</a>
-											</li>
-											<li class="uk-navbar-item">
-												<a href="{{ path('home') }}">{% trans %}Доставка{% endtrans %}</a>
-											</li>
-											<li class="uk-navbar-item">
-												<a href="{{ path('home') }}">{% trans %}Корзина{% endtrans %}</a>
-											</li> #}
-									</ul>
-								</div>
-							</div>
-						</header>
+						</div>
+					</header>
 					{% endblock %}
 					<body>
 					{% block body %}{% endblock %}
